@@ -1,0 +1,14 @@
+C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\bin\Debug\ShoppingOnline.exe.config
+C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\bin\Debug\ShoppingOnline.exe
+C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\bin\Debug\ShoppingOnline.pdb
+C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.csproj.AssemblyReference.cache
+C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.csproj.SuggestedBindingRedirects.cache
+C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.Home.resources
+C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.Properties.Resources.resources
+C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.csproj.GenerateResource.cache
+C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.csproj.CoreCompileInputs.cache
+C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.exe
+C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.pdb
+C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.ProductInfo.resources
+C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.Bill.resources
+C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.Payment.resources
