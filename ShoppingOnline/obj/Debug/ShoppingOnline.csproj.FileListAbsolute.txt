@@ -12,3 +12,4 @@ C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Te
 C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.ProductInfo.resources
 C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.Bill.resources
 C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.Payment.resources
+C:\Users\Phuc Khang\OneDrive - Trường ĐH CNTT - University of Information Technology\III\C#\project\ShoppingOnline\ShoppingOnline\obj\Debug\ShoppingOnline.Cart.resources

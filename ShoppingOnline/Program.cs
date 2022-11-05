@@ -16,7 +16,7 @@ namespace ShoppingOnline
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProductInfo());
+            Application.Run(new Home());
         }
     }
 }
