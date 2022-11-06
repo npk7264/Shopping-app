@@ -33,6 +33,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.pnThongTinSP = new System.Windows.Forms.Panel();
+            this.lbHanSD = new System.Windows.Forms.Label();
+            this.lbNgaySX = new System.Windows.Forms.Label();
+            this.lbThuongHieu = new System.Windows.Forms.Label();
+            this.lbXuatXu = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnMua = new System.Windows.Forms.Button();
             this.btnThemGioHang = new System.Windows.Forms.Button();
             this.btnGiamSP = new System.Windows.Forms.Button();
@@ -41,14 +49,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbGiaSP = new System.Windows.Forms.Label();
             this.lbTenSP = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbXuatXu = new System.Windows.Forms.Label();
-            this.lbThuongHieu = new System.Windows.Forms.Label();
-            this.lbNgaySX = new System.Windows.Forms.Label();
-            this.lbHanSD = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDetail)).BeginInit();
             this.panel2.SuspendLayout();
@@ -112,6 +112,86 @@
             this.pnThongTinSP.Name = "pnThongTinSP";
             this.pnThongTinSP.Size = new System.Drawing.Size(679, 396);
             this.pnThongTinSP.TabIndex = 8;
+            // 
+            // lbHanSD
+            // 
+            this.lbHanSD.AutoSize = true;
+            this.lbHanSD.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHanSD.Location = new System.Drawing.Point(230, 122);
+            this.lbHanSD.Name = "lbHanSD";
+            this.lbHanSD.Size = new System.Drawing.Size(92, 29);
+            this.lbHanSD.TabIndex = 17;
+            this.lbHanSD.Text = "Xuất xứ";
+            // 
+            // lbNgaySX
+            // 
+            this.lbNgaySX.AutoSize = true;
+            this.lbNgaySX.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNgaySX.Location = new System.Drawing.Point(230, 85);
+            this.lbNgaySX.Name = "lbNgaySX";
+            this.lbNgaySX.Size = new System.Drawing.Size(92, 29);
+            this.lbNgaySX.TabIndex = 16;
+            this.lbNgaySX.Text = "Xuất xứ";
+            // 
+            // lbThuongHieu
+            // 
+            this.lbThuongHieu.AutoSize = true;
+            this.lbThuongHieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThuongHieu.Location = new System.Drawing.Point(230, 48);
+            this.lbThuongHieu.Name = "lbThuongHieu";
+            this.lbThuongHieu.Size = new System.Drawing.Size(92, 29);
+            this.lbThuongHieu.TabIndex = 15;
+            this.lbThuongHieu.Text = "Xuất xứ";
+            // 
+            // lbXuatXu
+            // 
+            this.lbXuatXu.AutoSize = true;
+            this.lbXuatXu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbXuatXu.Location = new System.Drawing.Point(230, 11);
+            this.lbXuatXu.Name = "lbXuatXu";
+            this.lbXuatXu.Size = new System.Drawing.Size(92, 29);
+            this.lbXuatXu.TabIndex = 14;
+            this.lbXuatXu.Text = "Xuất xứ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(20, 122);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(147, 29);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Hạn sử dụng";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(19, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(162, 29);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Ngày sản xuất";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(19, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 29);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Thương hiệu";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 29);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Xuất xứ";
             // 
             // btnMua
             // 
@@ -198,86 +278,6 @@
             this.lbTenSP.TabIndex = 0;
             this.lbTenSP.Text = "Tên sản phẩm";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 29);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Xuất xứ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 29);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Thương hiệu";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 85);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(162, 29);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Ngày sản xuất";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(20, 122);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(147, 29);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Hạn sử dụng";
-            // 
-            // lbXuatXu
-            // 
-            this.lbXuatXu.AutoSize = true;
-            this.lbXuatXu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbXuatXu.Location = new System.Drawing.Point(230, 11);
-            this.lbXuatXu.Name = "lbXuatXu";
-            this.lbXuatXu.Size = new System.Drawing.Size(92, 29);
-            this.lbXuatXu.TabIndex = 14;
-            this.lbXuatXu.Text = "Xuất xứ";
-            // 
-            // lbThuongHieu
-            // 
-            this.lbThuongHieu.AutoSize = true;
-            this.lbThuongHieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThuongHieu.Location = new System.Drawing.Point(230, 48);
-            this.lbThuongHieu.Name = "lbThuongHieu";
-            this.lbThuongHieu.Size = new System.Drawing.Size(92, 29);
-            this.lbThuongHieu.TabIndex = 15;
-            this.lbThuongHieu.Text = "Xuất xứ";
-            // 
-            // lbNgaySX
-            // 
-            this.lbNgaySX.AutoSize = true;
-            this.lbNgaySX.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgaySX.Location = new System.Drawing.Point(230, 85);
-            this.lbNgaySX.Name = "lbNgaySX";
-            this.lbNgaySX.Size = new System.Drawing.Size(92, 29);
-            this.lbNgaySX.TabIndex = 16;
-            this.lbNgaySX.Text = "Xuất xứ";
-            // 
-            // lbHanSD
-            // 
-            this.lbHanSD.AutoSize = true;
-            this.lbHanSD.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHanSD.Location = new System.Drawing.Point(230, 122);
-            this.lbHanSD.Name = "lbHanSD";
-            this.lbHanSD.Size = new System.Drawing.Size(92, 29);
-            this.lbHanSD.TabIndex = 17;
-            this.lbHanSD.Text = "Xuất xứ";
-            // 
             // ProductInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -285,6 +285,7 @@
             this.ClientSize = new System.Drawing.Size(1340, 740);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ProductInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductInfo";

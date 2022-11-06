@@ -60,12 +60,12 @@ namespace ShoppingOnline
                 // Price label
                 Label price_lb = new Label();
                 price_lb.Text = Functions.GetFieldValues("select GiaSP from SANPHAM where TenSP = N'" + sp + "'");
-                price_lb.Location = new Point(470, 38);
+                price_lb.Location = new Point(320, 38);
                 price_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                 // Quantity label
                 Label quantity_lb = new Label();
                 quantity_lb.Text = Functions.GetFieldValues("select SoLuong from GIOHANG where TenSP = N'" + sp + "'");
-                quantity_lb.Location = new Point(570, 38);
+                quantity_lb.Location = new Point(490, 38);
                 quantity_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                 // Total price label
                 Label total_lb = new Label();

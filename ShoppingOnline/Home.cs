@@ -45,6 +45,7 @@ namespace ShoppingOnline
                 Panel pn = new Panel();
                 pn.Size = new Size(220, 165);
                 pn.Location = new Point(0, 0);
+                pn.BorderStyle = BorderStyle.FixedSingle;
                 PictureBox pb = new PictureBox();
                 pb.Size = new Size(220, 165);
                 pb.BackgroundImageLayout = ImageLayout.Zoom;
@@ -67,6 +68,7 @@ namespace ShoppingOnline
                     "select GiaSP from SANPHAM where TenFile = N'" + path + "'"));
                 price_lb.TextAlign = ContentAlignment.MiddleCenter;
                 price_lb.Font = new Font("Arial", 12, FontStyle.Regular);
+                price_lb.ForeColor = Color.FromArgb(193, 0, 23);
                 price_lb.AutoSize = false;
                 price_lb.Width = 240;
                 price_lb.Location = new Point(0, 200);
@@ -149,6 +151,7 @@ namespace ShoppingOnline
                         Panel pn = new Panel();
                         pn.Size = new Size(220, 165);
                         pn.Location = new Point(0, 0);
+                        pn.BorderStyle = BorderStyle.FixedSingle;
                         PictureBox pb = new PictureBox();
                         pb.Size = new Size(220, 165);
                         pb.BackgroundImageLayout = ImageLayout.Zoom;
@@ -171,6 +174,7 @@ namespace ShoppingOnline
                             "select GiaSP from SANPHAM where TenFile = N'" + path + "'"));
                         price_lb.TextAlign = ContentAlignment.MiddleCenter;
                         price_lb.Font = new Font("Arial", 12, FontStyle.Regular);
+                        price_lb.ForeColor = Color.FromArgb(193, 0, 23);
                         price_lb.AutoSize = false;
                         price_lb.Width = 240;
                         price_lb.Location = new Point(0, 200);
@@ -220,6 +224,7 @@ namespace ShoppingOnline
                             Panel pn = new Panel();
                             pn.Size = new Size(220, 165);
                             pn.Location = new Point(0, 0);
+                            pn.BorderStyle = BorderStyle.FixedSingle;
                             PictureBox pb = new PictureBox();
                             pb.Size = new Size(220, 165);
                             pb.BackgroundImageLayout = ImageLayout.Zoom;
@@ -242,6 +247,7 @@ namespace ShoppingOnline
                                 "select GiaSP from SANPHAM where TenFile = N'" + path + "'"));
                             price_lb.TextAlign = ContentAlignment.MiddleCenter;
                             price_lb.Font = new Font("Arial", 12, FontStyle.Regular);
+                            price_lb.ForeColor = Color.FromArgb(193, 0, 23);
                             price_lb.AutoSize = false;
                             price_lb.Width = 240;
                             price_lb.Location = new Point(0, 200);
@@ -255,12 +261,11 @@ namespace ShoppingOnline
                 }
             }
         }
-    
+
         private void lbGioHang_Click(object sender, EventArgs e)
         {
             Cart frm = new Cart();
             frm.ShowDialog();
         }
-
     }
 }
