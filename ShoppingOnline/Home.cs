@@ -28,51 +28,7 @@ namespace ShoppingOnline
         {
             Functions.Connect();
             foreach (string topic in topic_list)
-            {
-                string[] files = Directory.GetFiles(topic);
-                foreach (string file in files)
-                {
-                    int index = file.IndexOf("\\") + 1;
-                    string path = file.Substring(index, file.Length - index - 4);
-
-                    Panel p = new Panel();
-                    p.Size = new Size(220, 250);
-                    // Product Image
-                    Panel pn = new Panel();
-                    pn.Size = new Size(220, 165);
-                    pn.Location = new Point(0, 0);
-                    PictureBox pb = new PictureBox();
-                    pb.Size = new Size(220, 165);
-                    pb.BackgroundImageLayout = ImageLayout.Zoom;
-                    pb.BackgroundImage = Image.FromFile(file);
-                    pb.Tag = file;
-                    pb.MouseClick += new MouseEventHandler(this._click);
-                    pn.Controls.Add(pb);
-                    // Name label
-                    Label name_lb = new Label();
-                    name_lb.Text = Convert.ToString(Functions.GetFieldValues(
-                        "select TenSP from SANPHAM where TenFile = N'" + path + "'"));
-                    name_lb.TextAlign = ContentAlignment.MiddleCenter;
-                    name_lb.Font = new Font("Arial", 12, FontStyle.Regular);
-                    name_lb.AutoSize = false;
-                    name_lb.Width = 240;
-                    name_lb.Location = new Point(0, 175);
-                    // Price label
-                    Label price_lb = new Label();
-                    price_lb.Text = Convert.ToString(Functions.GetFieldValues(
-                        "select GiaSP from SANPHAM where TenFile = N'" + path + "'"));
-                    price_lb.TextAlign = ContentAlignment.MiddleCenter;
-                    price_lb.Font = new Font("Arial", 12, FontStyle.Regular);
-                    price_lb.AutoSize = false;
-                    price_lb.Width = 240;
-                    price_lb.Location = new Point(0, 200);
-                    // Add to panel
-                    p.Controls.Add(pn);
-                    p.Controls.Add(name_lb);
-                    p.Controls.Add(price_lb);
-                    flowLayoutPanel.Controls.Add(p);
-                }
-            }
+                loadData(topic);
         }
 
         void _click(object sender, MouseEventArgs e)
@@ -87,7 +43,6 @@ namespace ShoppingOnline
 
         void loadData(string topic)
         {
-            flowLayoutPanel.Controls.Clear();
             string[] files = Directory.GetFiles(topic);
             foreach (string file in files)
             {
@@ -135,22 +90,27 @@ namespace ShoppingOnline
 
         private void btnThit_Click(object sender, EventArgs e)
         {
+            flowLayoutPanel.Controls.Clear();
             loadData("meat");
         }
         private void btnRau_Click(object sender, EventArgs e)
         {
+            flowLayoutPanel.Controls.Clear();
             loadData("vegetable");
         }
         private void btnMi_Click(object sender, EventArgs e)
         {
+            flowLayoutPanel.Controls.Clear();
             loadData("noodle");
         }
         private void btnBanh_Click(object sender, EventArgs e)
         {
+            flowLayoutPanel.Controls.Clear();
             loadData("cake");
         }
         private void btnNuoc_Click(object sender, EventArgs e)
         {
+            flowLayoutPanel.Controls.Clear();
             loadData("drink");
         }
 
