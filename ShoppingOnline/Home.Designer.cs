@@ -46,7 +46,7 @@
             // btnThit
             // 
             this.btnThit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThit.Location = new System.Drawing.Point(7, 3);
+            this.btnThit.Location = new System.Drawing.Point(7, 36);
             this.btnThit.Name = "btnThit";
             this.btnThit.Size = new System.Drawing.Size(327, 46);
             this.btnThit.TabIndex = 0;
@@ -57,7 +57,7 @@
             // btnRau
             // 
             this.btnRau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRau.Location = new System.Drawing.Point(7, 55);
+            this.btnRau.Location = new System.Drawing.Point(7, 88);
             this.btnRau.Name = "btnRau";
             this.btnRau.Size = new System.Drawing.Size(327, 46);
             this.btnRau.TabIndex = 1;
@@ -68,7 +68,7 @@
             // btnMi
             // 
             this.btnMi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMi.Location = new System.Drawing.Point(7, 107);
+            this.btnMi.Location = new System.Drawing.Point(7, 140);
             this.btnMi.Name = "btnMi";
             this.btnMi.Size = new System.Drawing.Size(327, 46);
             this.btnMi.TabIndex = 2;
@@ -79,7 +79,7 @@
             // btnNuoc
             // 
             this.btnNuoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuoc.Location = new System.Drawing.Point(7, 211);
+            this.btnNuoc.Location = new System.Drawing.Point(7, 244);
             this.btnNuoc.Name = "btnNuoc";
             this.btnNuoc.Size = new System.Drawing.Size(327, 46);
             this.btnNuoc.TabIndex = 3;
@@ -90,7 +90,7 @@
             // btnBanh
             // 
             this.btnBanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBanh.Location = new System.Drawing.Point(7, 159);
+            this.btnBanh.Location = new System.Drawing.Point(7, 192);
             this.btnBanh.Name = "btnBanh";
             this.btnBanh.Size = new System.Drawing.Size(327, 46);
             this.btnBanh.TabIndex = 4;
@@ -103,7 +103,7 @@
             this.txtTimSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTimSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimSP.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtTimSP.Location = new System.Drawing.Point(383, 12);
+            this.txtTimSP.Location = new System.Drawing.Point(264, 12);
             this.txtTimSP.Name = "txtTimSP";
             this.txtTimSP.Size = new System.Drawing.Size(374, 34);
             this.txtTimSP.TabIndex = 5;
@@ -113,7 +113,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(882, 18);
+            this.label1.Location = new System.Drawing.Point(763, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 25);
             this.label1.TabIndex = 6;
@@ -123,7 +123,7 @@
             // 
             this.lbGioHang.AutoSize = true;
             this.lbGioHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGioHang.Location = new System.Drawing.Point(985, 18);
+            this.lbGioHang.Location = new System.Drawing.Point(866, 18);
             this.lbGioHang.Name = "lbGioHang";
             this.lbGioHang.Size = new System.Drawing.Size(91, 25);
             this.lbGioHang.TabIndex = 7;
@@ -155,7 +155,7 @@
             this.pbSearchIcon.BackColor = System.Drawing.Color.DodgerBlue;
             this.pbSearchIcon.BackgroundImage = global::ShoppingOnline.Properties.Resources._211817_search_strong_icon;
             this.pbSearchIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbSearchIcon.Location = new System.Drawing.Point(763, 12);
+            this.pbSearchIcon.Location = new System.Drawing.Point(644, 12);
             this.pbSearchIcon.Name = "pbSearchIcon";
             this.pbSearchIcon.Size = new System.Drawing.Size(70, 34);
             this.pbSearchIcon.TabIndex = 12;
