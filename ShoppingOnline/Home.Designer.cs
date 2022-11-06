@@ -31,20 +31,22 @@
             this.btnThit = new System.Windows.Forms.Button();
             this.btnRau = new System.Windows.Forms.Button();
             this.btnMi = new System.Windows.Forms.Button();
-            this.btnDau = new System.Windows.Forms.Button();
+            this.btnNuoc = new System.Windows.Forms.Button();
             this.btnBanh = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTimSP = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbGioHang = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.pbSearchIcon = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSearchIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThit
             // 
             this.btnThit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThit.Location = new System.Drawing.Point(7, 36);
+            this.btnThit.Location = new System.Drawing.Point(7, 3);
             this.btnThit.Name = "btnThit";
             this.btnThit.Size = new System.Drawing.Size(327, 46);
             this.btnThit.TabIndex = 0;
@@ -55,7 +57,7 @@
             // btnRau
             // 
             this.btnRau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRau.Location = new System.Drawing.Point(7, 88);
+            this.btnRau.Location = new System.Drawing.Point(7, 55);
             this.btnRau.Name = "btnRau";
             this.btnRau.Size = new System.Drawing.Size(327, 46);
             this.btnRau.TabIndex = 1;
@@ -66,7 +68,7 @@
             // btnMi
             // 
             this.btnMi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMi.Location = new System.Drawing.Point(7, 140);
+            this.btnMi.Location = new System.Drawing.Point(7, 107);
             this.btnMi.Name = "btnMi";
             this.btnMi.Size = new System.Drawing.Size(327, 46);
             this.btnMi.TabIndex = 2;
@@ -74,21 +76,21 @@
             this.btnMi.UseVisualStyleBackColor = true;
             this.btnMi.Click += new System.EventHandler(this.btnMi_Click);
             // 
-            // btnDau
+            // btnNuoc
             // 
-            this.btnDau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDau.Location = new System.Drawing.Point(7, 244);
-            this.btnDau.Name = "btnDau";
-            this.btnDau.Size = new System.Drawing.Size(327, 46);
-            this.btnDau.TabIndex = 3;
-            this.btnDau.Text = "Dầu ăn, nước chấm, gia vị";
-            this.btnDau.UseVisualStyleBackColor = true;
-            this.btnDau.Click += new System.EventHandler(this.btnDau_Click);
+            this.btnNuoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuoc.Location = new System.Drawing.Point(7, 211);
+            this.btnNuoc.Name = "btnNuoc";
+            this.btnNuoc.Size = new System.Drawing.Size(327, 46);
+            this.btnNuoc.TabIndex = 3;
+            this.btnNuoc.Text = "Nước ngọt, nước trái cây";
+            this.btnNuoc.UseVisualStyleBackColor = true;
+            this.btnNuoc.Click += new System.EventHandler(this.btnNuoc_Click);
             // 
             // btnBanh
             // 
             this.btnBanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBanh.Location = new System.Drawing.Point(7, 192);
+            this.btnBanh.Location = new System.Drawing.Point(7, 159);
             this.btnBanh.Name = "btnBanh";
             this.btnBanh.Size = new System.Drawing.Size(327, 46);
             this.btnBanh.TabIndex = 4;
@@ -96,21 +98,22 @@
             this.btnBanh.UseVisualStyleBackColor = true;
             this.btnBanh.Click += new System.EventHandler(this.btnBanh_Click);
             // 
-            // textBox1
+            // txtTimSP
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox1.Location = new System.Drawing.Point(383, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(374, 34);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "Nhập sản phẩm bạn cần tìm";
+            this.txtTimSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTimSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimSP.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.txtTimSP.Location = new System.Drawing.Point(383, 12);
+            this.txtTimSP.Name = "txtTimSP";
+            this.txtTimSP.Size = new System.Drawing.Size(374, 34);
+            this.txtTimSP.TabIndex = 5;
+            this.txtTimSP.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimSP_KeyUp);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(763, 18);
+            this.label1.Location = new System.Drawing.Point(882, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 25);
             this.label1.TabIndex = 6;
@@ -120,7 +123,7 @@
             // 
             this.lbGioHang.AutoSize = true;
             this.lbGioHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGioHang.Location = new System.Drawing.Point(866, 18);
+            this.lbGioHang.Location = new System.Drawing.Point(985, 18);
             this.lbGioHang.Name = "lbGioHang";
             this.lbGioHang.Size = new System.Drawing.Size(91, 25);
             this.lbGioHang.TabIndex = 7;
@@ -131,7 +134,7 @@
             // 
             this.panel1.Controls.Add(this.btnThit);
             this.panel1.Controls.Add(this.btnRau);
-            this.panel1.Controls.Add(this.btnDau);
+            this.panel1.Controls.Add(this.btnNuoc);
             this.panel1.Controls.Add(this.btnBanh);
             this.panel1.Controls.Add(this.btnMi);
             this.panel1.Location = new System.Drawing.Point(12, 82);
@@ -147,22 +150,36 @@
             this.flowLayoutPanel.Size = new System.Drawing.Size(931, 646);
             this.flowLayoutPanel.TabIndex = 11;
             // 
+            // pbSearchIcon
+            // 
+            this.pbSearchIcon.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pbSearchIcon.BackgroundImage = global::ShoppingOnline.Properties.Resources._211817_search_strong_icon;
+            this.pbSearchIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbSearchIcon.Location = new System.Drawing.Point(763, 12);
+            this.pbSearchIcon.Name = "pbSearchIcon";
+            this.pbSearchIcon.Size = new System.Drawing.Size(70, 34);
+            this.pbSearchIcon.TabIndex = 12;
+            this.pbSearchIcon.TabStop = false;
+            this.pbSearchIcon.Click += new System.EventHandler(this.pbSearchIcon_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1340, 740);
+            this.Controls.Add(this.pbSearchIcon);
             this.Controls.Add(this.flowLayoutPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbGioHang);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTimSP);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Home_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbSearchIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,13 +190,14 @@
         private System.Windows.Forms.Button btnThit;
         private System.Windows.Forms.Button btnRau;
         private System.Windows.Forms.Button btnMi;
-        private System.Windows.Forms.Button btnDau;
+        private System.Windows.Forms.Button btnNuoc;
         private System.Windows.Forms.Button btnBanh;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTimSP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbGioHang;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
+        private System.Windows.Forms.PictureBox pbSearchIcon;
     }
 }
 
