@@ -32,7 +32,13 @@ namespace ShoppingOnline
 
         private void btnThemGioHang_Click(object sender, EventArgs e)
         {
-            string sql = "insert into GIOHANG values (N'" + lbTenSP.Text + "', " + lbGiaSP.Text + ", " + lbSoLuong.Text + ")";
+            string thanhtien = (Convert.ToInt32(lbGiaSP.Text) * Convert.ToInt32(lbSoLuong.Text)).ToString();
+            string sql;
+            int tensp = Convert.ToInt32(Functions.GetFieldValues("select COUNT(TenSP) from GIOHANG where TenSP = N'" + lbTenSP.Text + "'"));
+            if (tensp == 0)
+                sql = "insert into GIOHANG values (N'" + lbTenSP.Text + "', " + lbGiaSP.Text + ", " + lbSoLuong.Text + ", " + thanhtien + ")";
+            else
+                sql = "update GIOHANG set SoLuong = SoLuong + " + lbSoLuong.Text + ", ThanhTien = ThanhTien + " + thanhtien + " where TenSP = N'" + lbTenSP.Text + "'";
             Functions.RunSQL(sql);
         }
 

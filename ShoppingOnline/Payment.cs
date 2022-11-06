@@ -16,5 +16,10 @@ namespace ShoppingOnline
         {
             InitializeComponent();
         }
+
+        private void Payment_Load(object sender, EventArgs e)
+        {
+            lbTien.Text = Functions.GetFieldValues("select SUM(ThanhTien) from GIOHANG");
+        }
     }
 }

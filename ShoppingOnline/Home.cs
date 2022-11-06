@@ -31,16 +31,6 @@ namespace ShoppingOnline
                 loadData(topic);
         }
 
-        void _click(object sender, MouseEventArgs e)
-        {
-            pbClick = (PictureBox)sender;
-            filenameclick = (string)pbClick.Tag;
-            int index = filenameclick.IndexOf("\\") + 1;
-            filenameclick = filenameclick.Substring(index, filenameclick.Length - index - 4);
-            ProductInfo frm = new ProductInfo();
-            frm.ShowDialog();
-        }
-
         void loadData(string topic)
         {
             string[] files = Directory.GetFiles(topic);
@@ -88,6 +78,16 @@ namespace ShoppingOnline
             }
         }
 
+        void _click(object sender, MouseEventArgs e)
+        {
+            pbClick = (PictureBox)sender;
+            filenameclick = (string)pbClick.Tag;
+            int index = filenameclick.IndexOf("\\") + 1;
+            filenameclick = filenameclick.Substring(index, filenameclick.Length - index - 4);
+            ProductInfo frm = new ProductInfo();
+            frm.ShowDialog();
+        }
+
         private void btnThit_Click(object sender, EventArgs e)
         {
             flowLayoutPanel.Controls.Clear();
@@ -112,12 +112,6 @@ namespace ShoppingOnline
         {
             flowLayoutPanel.Controls.Clear();
             loadData("drink");
-        }
-
-        private void lbGioHang_Click(object sender, EventArgs e)
-        {
-            Cart frm = new Cart();
-            frm.ShowDialog();
         }
 
         private void pbSearchIcon_Click(object sender, EventArgs e)
@@ -189,7 +183,6 @@ namespace ShoppingOnline
                 }
             }
         }
-
         private void txtTimSP_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -262,5 +255,12 @@ namespace ShoppingOnline
                 }
             }
         }
+    
+        private void lbGioHang_Click(object sender, EventArgs e)
+        {
+            Cart frm = new Cart();
+            frm.ShowDialog();
+        }
+
     }
 }

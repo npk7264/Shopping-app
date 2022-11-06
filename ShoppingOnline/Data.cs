@@ -56,24 +56,6 @@ namespace ShoppingOnline
             cmd = null;
         }
 
-        public static void RunSqlDel(string sql)
-        {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = Functions.Con;
-            cmd.CommandText = sql;
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                //MessageBox.Show("Dữ liệu đang được dùng, không thể xoá...", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                MessageBox.Show(ex.ToString());
-            }
-            cmd.Dispose();
-            cmd = null;
-        }
-
         public static string GetFieldValues(string sql)
         {
             string ma = "";
@@ -84,6 +66,22 @@ namespace ShoppingOnline
                 ma = reader.GetValue(0).ToString();
             reader.Close();
             return ma;
+        }
+
+        public static List<string> GetFieldValuesList(string sql)
+        {
+            List<string> list = new List<string>();
+            string ma = "";
+            SqlCommand cmd = new SqlCommand(sql, Con);
+            SqlDataReader reader;
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                ma = reader.GetValue(0).ToString();
+                list.Add(ma);
+            }
+            reader.Close();
+            return list;
         }
     }
 }
