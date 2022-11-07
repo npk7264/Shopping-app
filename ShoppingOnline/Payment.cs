@@ -30,7 +30,7 @@ namespace ShoppingOnline
             foreach (string sp in sp_in_cart)
             {
                 Panel p = new Panel();
-                p.Size = new Size(flowLayoutPanel.Width, 100);
+                p.Size = new Size(flowLayoutPanel.Width-20, 100);
                 p.BackColor = SystemColors.Window;
                 p.BorderStyle = BorderStyle.FixedSingle;
 
@@ -49,8 +49,10 @@ namespace ShoppingOnline
                 // Detail label
                 Label name_lb = new Label();
                 name_lb.Text = sp;
-                name_lb.Location = new Point(170, 38);
+                name_lb.Height = 100;
+                name_lb.Location = new Point(170, 0);
                 name_lb.Font = new Font("Arial", 12, FontStyle.Regular);
+                name_lb.TextAlign = ContentAlignment.MiddleCenter;
                 // Price label
                 Label price_lb = new Label();
                 price_lb.Text = Functions.GetFieldValues("select GiaSP from SANPHAM where TenSP = N'" + sp + "'");

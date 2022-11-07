@@ -56,5 +56,12 @@ namespace ShoppingOnline
             int soluong = Int32.Parse(lbSoLuong.Text) + 1;
             lbSoLuong.Text = soluong.ToString();
         }
+
+        private void pbGioHang_Click(object sender, EventArgs e)
+        {
+            Cart frm = new Cart();
+            frm.ShowDialog();
+            this.Close();
+        }
     }
 }

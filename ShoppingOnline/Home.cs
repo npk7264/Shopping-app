@@ -23,7 +23,7 @@ namespace ShoppingOnline
             Functions.Connect();
             foreach (string topic in topic_list)
                 loadData(topic);
-            Functions.RunSQL("delete from SANPHAMDAXEM");
+            //Functions.RunSQL("delete from SANPHAMDAXEM");
         }
 
         string[] topic_list = { "meat", "vegetable", "noodle", "cake", "drink" };

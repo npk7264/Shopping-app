@@ -315,6 +315,7 @@
             this.pbGioHang.Size = new System.Drawing.Size(73, 43);
             this.pbGioHang.TabIndex = 15;
             this.pbGioHang.TabStop = false;
+            this.pbGioHang.Click += new System.EventHandler(this.pbGioHang_Click);
             // 
             // label8
             // 

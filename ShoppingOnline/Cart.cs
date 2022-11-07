@@ -38,7 +38,7 @@ namespace ShoppingOnline
             foreach (string sp in sp_in_cart)
             {
                 Panel p = new Panel();
-                p.Size = new Size(flowLayoutPanelCart.Width-15, 100);
+                p.Size = new Size(flowLayoutPanelCart.Width-20, 100);
                 p.BackColor = SystemColors.Window;
                 p.BorderStyle = BorderStyle.FixedSingle;
 
