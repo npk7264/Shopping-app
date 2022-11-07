@@ -25,12 +25,13 @@ namespace ShoppingOnline
             flowLayoutPanel.HorizontalScroll.Maximum = 0;
             flowLayoutPanel.AutoScroll = true;
 
-            List<string> sp_in_cart = Functions.GetFieldValuesList("select TenSP from GIOHANG");
+            string id = Functions.GetFieldValues("select MAX(ID) from GIOHANG");
+            List<string> sp_in_cart = Functions.GetFieldValuesList("select TenSP from GIOHANG where ID = " + id);
 
             foreach (string sp in sp_in_cart)
             {
                 Panel p = new Panel();
-                p.Size = new Size(flowLayoutPanel.Width-20, 100);
+                p.Size = new Size(flowLayoutPanel.Width - 20, 100);
                 p.BackColor = SystemColors.Window;
                 p.BorderStyle = BorderStyle.FixedSingle;
 
@@ -77,12 +78,15 @@ namespace ShoppingOnline
                 p.Controls.Add(total_lb);
                 flowLayoutPanel.Controls.Add(p);
             }
-            lbTien.Text = Functions.GetFieldValues("select SUM(ThanhTien) from GIOHANG");
+            lbTien.Text = Functions.GetFieldValues("select SUM(ThanhTien) from GIOHANG where ID = " + id);
         }
 
-        private void btnThanhToan_Click(object sender, EventArgs e)
+        private void btnThanhToan_Click_1(object sender, EventArgs e)
         {
-
+            string id = Functions.GetFieldValues("select MAX(ID) from GIOHANG");
+            string so_sp = "10";
+            Functions.RunSQL("insert into DONHANG values(" + id + ", " + so_sp + ", " + lbTien.Text + ")");
+            Cart.flp.Controls.Clear();
         }
     }
 }

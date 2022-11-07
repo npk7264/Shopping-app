@@ -30,7 +30,7 @@
         {
             this.flowLayoutPanelCart = new System.Windows.Forms.FlowLayoutPanel();
             this.btnThanhToan = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnIndex = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,12 +38,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lbTongTien = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnTien = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnIndex.SuspendLayout();
+            this.pnTien.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,17 +67,18 @@
             this.btnThanhToan.UseVisualStyleBackColor = true;
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
-            // panel2
+            // pnIndex
             // 
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(12, 110);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1316, 45);
-            this.panel2.TabIndex = 0;
+            this.pnIndex.Controls.Add(this.label5);
+            this.pnIndex.Controls.Add(this.label4);
+            this.pnIndex.Controls.Add(this.label3);
+            this.pnIndex.Controls.Add(this.label2);
+            this.pnIndex.Controls.Add(this.label1);
+            this.pnIndex.Location = new System.Drawing.Point(12, 110);
+            this.pnIndex.Name = "pnIndex";
+            this.pnIndex.Size = new System.Drawing.Size(1316, 45);
+            this.pnIndex.TabIndex = 0;
+            this.pnIndex.Visible = false;
             // 
             // label5
             // 
@@ -152,15 +153,16 @@
             this.lbTongTien.Text = "10000";
             this.lbTongTien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel3
+            // pnTien
             // 
-            this.panel3.Controls.Add(this.btnThanhToan);
-            this.panel3.Controls.Add(this.lbTongTien);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(12, 574);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1316, 154);
-            this.panel3.TabIndex = 7;
+            this.pnTien.Controls.Add(this.btnThanhToan);
+            this.pnTien.Controls.Add(this.lbTongTien);
+            this.pnTien.Controls.Add(this.label6);
+            this.pnTien.Location = new System.Drawing.Point(12, 574);
+            this.pnTien.Name = "pnTien";
+            this.pnTien.Size = new System.Drawing.Size(1316, 154);
+            this.pnTien.TabIndex = 7;
+            this.pnTien.Visible = false;
             // 
             // panel1
             // 
@@ -183,6 +185,7 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "Grocery";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -201,18 +204,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1340, 740);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnTien);
+            this.Controls.Add(this.pnIndex);
             this.Controls.Add(this.flowLayoutPanelCart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Cart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cart";
             this.Load += new System.EventHandler(this.Cart_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnIndex.ResumeLayout(false);
+            this.pnIndex.PerformLayout();
+            this.pnTien.ResumeLayout(false);
+            this.pnTien.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -222,7 +225,7 @@
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCart;
         private System.Windows.Forms.Button btnThanhToan;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnIndex;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -230,7 +233,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbTongTien;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnTien;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;

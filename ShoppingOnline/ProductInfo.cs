@@ -34,11 +34,19 @@ namespace ShoppingOnline
         {
             string thanhtien = (Convert.ToInt32(lbGiaSP.Text) * Convert.ToInt32(lbSoLuong.Text)).ToString();
             string sql;
-            int tensp = Convert.ToInt32(Functions.GetFieldValues("select COUNT(TenSP) from GIOHANG where TenSP = N'" + lbTenSP.Text + "'"));
-            if (tensp == 0)
-                sql = "insert into GIOHANG values (N'" + lbTenSP.Text + "', " + lbGiaSP.Text + ", " + lbSoLuong.Text + ", " + thanhtien + ")";
+
+            int count_donhang = Convert.ToInt32(Functions.GetFieldValues("select COUNT(*) from DONHANG"));
+            string id_donhang;
+            if (count_donhang == 0)
+                id_donhang = "1";
             else
-                sql = "update GIOHANG set SoLuong = SoLuong + " + lbSoLuong.Text + ", ThanhTien = ThanhTien + " + thanhtien + " where TenSP = N'" + lbTenSP.Text + "'";
+                id_donhang = (Convert.ToInt32(Functions.GetFieldValues("select MAX(ID) from DONHANG")) + 1).ToString();
+
+            int tensp = Convert.ToInt32(Functions.GetFieldValues("select COUNT(TenSP) from GIOHANG where TenSP = N'" + lbTenSP.Text + "' and ID = "+id_donhang));
+            if (tensp == 0)
+                sql = "insert into GIOHANG values (N'" + lbTenSP.Text + "', " + lbGiaSP.Text + ", " + lbSoLuong.Text + ", " + thanhtien + ", " + id_donhang + ")";
+            else
+                sql = "update GIOHANG set SoLuong = SoLuong + " + lbSoLuong.Text + ", ThanhTien = ThanhTien + " + thanhtien + " where TenSP = N'" + lbTenSP.Text + "' and ID = "+id_donhang;
             Functions.RunSQL(sql);
         }
 
@@ -59,9 +67,25 @@ namespace ShoppingOnline
 
         private void pbGioHang_Click(object sender, EventArgs e)
         {
-            Cart frm = new Cart();
-            frm.ShowDialog();
-            this.Close();
+            int max1;
+            if (Convert.ToInt32(Functions.GetFieldValues("select COUNT(ID) from GIOHANG")) != 0)
+                max1 = Convert.ToInt32(Functions.GetFieldValues("select MAX(ID) from GIOHANG"));
+            else
+                max1 = 0;
+            int max2;
+            if (Convert.ToInt32(Functions.GetFieldValues("select COUNT(ID) from DONHANG")) != 0)
+                max2 = Convert.ToInt32(Functions.GetFieldValues("select MAX(ID) from DONHANG"));
+            else
+                max2 = 0;
+
+            if ((max1 == max2 && max2 != 0) || max1 == 0)
+                MessageBox.Show("Chưa có sản phẩm nào trong giỏ hàng");
+            else
+            {
+                this.Close();
+                Cart frm = new Cart();
+                frm.ShowDialog();
+            }
         }
     }
 }
