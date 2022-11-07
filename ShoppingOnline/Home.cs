@@ -362,5 +362,10 @@ namespace ShoppingOnline
                 flowLayoutPanel.Controls.Add(p);
             }
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -215,6 +215,7 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Grocery";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pbGioHang
             // 
@@ -266,6 +267,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1340, 740);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
