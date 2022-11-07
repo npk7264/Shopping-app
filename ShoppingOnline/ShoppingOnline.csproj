@@ -150,5 +150,8 @@
   <ItemGroup>
     <None Include="Resources\211817_search_strong_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\353439_basket_purse_shopping_cart_ecommerce_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
