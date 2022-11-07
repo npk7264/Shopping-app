@@ -35,7 +35,7 @@ namespace ShoppingOnline
             string thanhtien = (Convert.ToInt32(lbGiaSP.Text) * Convert.ToInt32(lbSoLuong.Text)).ToString();
             string sql;
 
-            int count_donhang = Convert.ToInt32(Functions.GetFieldValues("select COUNT(*) from DONHANG"));
+            int count_donhang = Convert.ToInt32(Functions.GetFieldValues("select COUNT(ID) from DONHANG"));
             string id_donhang;
             if (count_donhang == 0)
                 id_donhang = "1";

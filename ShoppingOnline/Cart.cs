@@ -79,7 +79,7 @@ namespace ShoppingOnline
                     price_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                     // Quantity label
                     Label quantity_lb = new Label();
-                    quantity_lb.Text = Functions.GetFieldValues("select SoLuong from GIOHANG where TenSP = N'" + sp + "'");
+                    quantity_lb.Text = Functions.GetFieldValues("select SoLuong from GIOHANG where TenSP = N'" + sp + "' and ID = " + max1);
                     quantity_lb.Location = new Point(520, 38);
                     quantity_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                     // Total price label
