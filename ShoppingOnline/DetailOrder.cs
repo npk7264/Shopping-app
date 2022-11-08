@@ -57,19 +57,22 @@ namespace ShoppingOnline
                 // Price label
                 Label price_lb = new Label();
                 price_lb.Text = Functions.GetFieldValues("select GiaSP from SANPHAM where TenSP = N'" + sp + "'");
-                price_lb.Location = new Point(315, 38);
+                price_lb.Location = new Point(380, 38);
                 price_lb.Font = new Font("Arial", 12, FontStyle.Regular);
+                price_lb.TextAlign = ContentAlignment.MiddleCenter;
                 // Quantity label
                 Label quantity_lb = new Label();
                 quantity_lb.Text = Functions.GetFieldValues("select SoLuong from GIOHANG where TenSP = N'" + sp + "' and ID = " + max1);
-                quantity_lb.Location = new Point(520, 38);
+                quantity_lb.Location = new Point(570, 38);
                 quantity_lb.Font = new Font("Arial", 12, FontStyle.Regular);
+                quantity_lb.TextAlign = ContentAlignment.MiddleCenter;
                 // Total price label
                 Label total_lb = new Label();
                 total_lb.Text = (Convert.ToInt32(price_lb.Text) * Convert.ToInt32(quantity_lb.Text)).ToString();
-                total_lb.Location = new Point(680, 38);
+                total_lb.Location = new Point(765, 38);
                 total_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                 total_lb.ForeColor = Color.FromArgb(193, 0, 23);
+                total_lb.TextAlign= ContentAlignment.MiddleCenter;
 
                 p.Controls.Add(pb);
                 p.Controls.Add(name_lb);

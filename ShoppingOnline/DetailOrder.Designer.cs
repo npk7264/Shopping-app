@@ -31,18 +31,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.pnIndex = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanelCart = new System.Windows.Forms.FlowLayoutPanel();
             this.pnTien = new System.Windows.Forms.Panel();
             this.lbTongTien = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.pnIndex = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.pnIndex.SuspendLayout();
             this.pnTien.SuspendLayout();
+            this.pnIndex.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,57 +77,6 @@
             this.label8.TabIndex = 6;
             this.label8.Text = "Đơn hàng";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnIndex
-            // 
-            this.pnIndex.Controls.Add(this.label4);
-            this.pnIndex.Controls.Add(this.label3);
-            this.pnIndex.Controls.Add(this.label2);
-            this.pnIndex.Controls.Add(this.label1);
-            this.pnIndex.Location = new System.Drawing.Point(12, 113);
-            this.pnIndex.Name = "pnIndex";
-            this.pnIndex.Size = new System.Drawing.Size(1316, 45);
-            this.pnIndex.TabIndex = 16;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(854, 8);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(203, 29);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Thành tiền (đồng)";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(643, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 29);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Số lượng";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(373, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 29);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Đơn giá (đồng)";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Sản phẩm";
             // 
             // flowLayoutPanelCart
             // 
@@ -170,13 +119,64 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Tổng tiền (đồng)";
             // 
+            // pnIndex
+            // 
+            this.pnIndex.Controls.Add(this.label12);
+            this.pnIndex.Controls.Add(this.label13);
+            this.pnIndex.Controls.Add(this.label14);
+            this.pnIndex.Controls.Add(this.label15);
+            this.pnIndex.Location = new System.Drawing.Point(12, 113);
+            this.pnIndex.Name = "pnIndex";
+            this.pnIndex.Size = new System.Drawing.Size(1310, 45);
+            this.pnIndex.TabIndex = 12;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(981, 8);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(203, 29);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Thành tiền (đồng)";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(772, 8);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(109, 29);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Số lượng";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(486, 8);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(173, 29);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Đơn giá (đồng)";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(13, 8);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(121, 29);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Sản phẩm";
+            // 
             // DetailOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1340, 740);
-            this.Controls.Add(this.pnTien);
             this.Controls.Add(this.pnIndex);
+            this.Controls.Add(this.pnTien);
             this.Controls.Add(this.flowLayoutPanelCart);
             this.Controls.Add(this.panel1);
             this.Name = "DetailOrder";
@@ -184,10 +184,10 @@
             this.Text = "DetailOrder";
             this.Load += new System.EventHandler(this.DetailOrder_Load);
             this.panel1.ResumeLayout(false);
-            this.pnIndex.ResumeLayout(false);
-            this.pnIndex.PerformLayout();
             this.pnTien.ResumeLayout(false);
             this.pnTien.PerformLayout();
+            this.pnIndex.ResumeLayout(false);
+            this.pnIndex.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -197,14 +197,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel pnIndex;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCart;
         private System.Windows.Forms.Panel pnTien;
         private System.Windows.Forms.Label lbTongTien;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel pnIndex;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
     }
 }
