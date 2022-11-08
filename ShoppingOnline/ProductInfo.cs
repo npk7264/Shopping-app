@@ -18,6 +18,8 @@ namespace ShoppingOnline
             InitializeComponent();
         }
 
+        string price;
+
         private void ProductInfo_Load(object sender, EventArgs e)
         {
             pbDetail.BackgroundImage = Home.pbClick.BackgroundImage;
@@ -25,14 +27,15 @@ namespace ShoppingOnline
             lbTenSP.Text = Convert.ToString(Functions.GetFieldValues(
                 "select TenSP from SANPHAM where TenFile = N'" + Home.filenameclick + "'"));
             lbGiaSP.Text = Convert.ToString(Functions.GetFieldValues(
-                "select GiaSP from SANPHAM where TenFile = N'" + Home.filenameclick + "'"));
+                "select GiaSP from SANPHAM where TenFile = N'" + Home.filenameclick + "'")) + " đồng";
+            price = lbGiaSP.Text.Substring(0, lbGiaSP.Text.Length - 5);
             lbXuatXu.Text = Convert.ToString(Functions.GetFieldValues(
                 "select XuatXu from SANPHAM where TenFile = N'" + Home.filenameclick + "'"));
         }
 
         private void btnThemGioHang_Click(object sender, EventArgs e)
         {
-            string thanhtien = (Convert.ToInt32(lbGiaSP.Text) * Convert.ToInt32(lbSoLuong.Text)).ToString();
+            string thanhtien = (Convert.ToInt32(price) * Convert.ToInt32(txtSoLuong.Text)).ToString();
             string sql;
 
             int count_donhang = Convert.ToInt32(Functions.GetFieldValues("select COUNT(ID) from DONHANG"));
@@ -44,25 +47,10 @@ namespace ShoppingOnline
 
             int tensp = Convert.ToInt32(Functions.GetFieldValues("select COUNT(TenSP) from GIOHANG where TenSP = N'" + lbTenSP.Text + "' and ID = " + id_donhang));
             if (tensp == 0)
-                sql = "insert into GIOHANG values (N'" + lbTenSP.Text + "', " + lbGiaSP.Text + ", " + lbSoLuong.Text + ", " + thanhtien + ", " + id_donhang + ")";
+                sql = "insert into GIOHANG values (N'" + lbTenSP.Text + "', " + price + ", " + txtSoLuong.Text + ", " + thanhtien + ", " + id_donhang + ")";
             else
-                sql = "update GIOHANG set SoLuong = SoLuong + " + lbSoLuong.Text + ", ThanhTien = ThanhTien + " + thanhtien + " where TenSP = N'" + lbTenSP.Text + "' and ID = " + id_donhang;
+                sql = "update GIOHANG set SoLuong = SoLuong + " + txtSoLuong.Text + ", ThanhTien = ThanhTien + " + thanhtien + " where TenSP = N'" + lbTenSP.Text + "' and ID = " + id_donhang;
             Functions.RunSQL(sql);
-        }
-
-        private void btnGiamSP_Click(object sender, EventArgs e)
-        {
-            if (lbSoLuong.Text != "1")
-            {
-                int soluong = Int32.Parse(lbSoLuong.Text) - 1;
-                lbSoLuong.Text = soluong.ToString();
-            }
-        }
-
-        private void btnThemSP_Click(object sender, EventArgs e)
-        {
-            int soluong = Int32.Parse(lbSoLuong.Text) + 1;
-            lbSoLuong.Text = soluong.ToString();
         }
 
         private void pbGioHang_Click(object sender, EventArgs e)

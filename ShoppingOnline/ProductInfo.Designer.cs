@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pnThongTinSP = new System.Windows.Forms.Panel();
             this.lbHanSD = new System.Windows.Forms.Label();
@@ -39,11 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnMua = new System.Windows.Forms.Button();
             this.btnThemGioHang = new System.Windows.Forms.Button();
-            this.btnGiamSP = new System.Windows.Forms.Button();
-            this.btnThemSP = new System.Windows.Forms.Button();
-            this.lbSoLuong = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbGiaSP = new System.Windows.Forms.Label();
             this.lbTenSP = new System.Windows.Forms.Label();
@@ -53,6 +51,7 @@
             this.pbGioHang = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.pnThongTinSP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDetail)).BeginInit();
             this.panel1.SuspendLayout();
@@ -61,13 +60,10 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.pnThongTinSP);
-            this.panel2.Controls.Add(this.btnMua);
             this.panel2.Controls.Add(this.btnThemGioHang);
-            this.panel2.Controls.Add(this.btnGiamSP);
-            this.panel2.Controls.Add(this.btnThemSP);
-            this.panel2.Controls.Add(this.lbSoLuong);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.lbGiaSP);
             this.panel2.Controls.Add(this.lbTenSP);
@@ -75,6 +71,27 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(741, 627);
             this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.Window;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.txtSoLuong);
+            this.panel3.Location = new System.Drawing.Point(134, 447);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(68, 40);
+            this.panel3.TabIndex = 11;
+            // 
+            // txtSoLuong
+            // 
+            this.txtSoLuong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoLuong.Location = new System.Drawing.Point(7, 8);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(52, 23);
+            this.txtSoLuong.TabIndex = 10;
+            this.txtSoLuong.Text = "1";
+            this.txtSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -186,59 +203,16 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Xuất xứ";
             // 
-            // btnMua
-            // 
-            this.btnMua.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMua.Location = new System.Drawing.Point(275, 514);
-            this.btnMua.Name = "btnMua";
-            this.btnMua.Size = new System.Drawing.Size(135, 50);
-            this.btnMua.TabIndex = 7;
-            this.btnMua.Text = "Mua ngay";
-            this.btnMua.UseVisualStyleBackColor = true;
-            // 
             // btnThemGioHang
             // 
             this.btnThemGioHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemGioHang.Location = new System.Drawing.Point(21, 514);
             this.btnThemGioHang.Name = "btnThemGioHang";
             this.btnThemGioHang.Size = new System.Drawing.Size(248, 50);
-            this.btnThemGioHang.TabIndex = 6;
+            this.btnThemGioHang.TabIndex = 0;
             this.btnThemGioHang.Text = "Thêm vào giỏ hàng";
             this.btnThemGioHang.UseVisualStyleBackColor = true;
             this.btnThemGioHang.Click += new System.EventHandler(this.btnThemGioHang_Click);
-            // 
-            // btnGiamSP
-            // 
-            this.btnGiamSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGiamSP.Location = new System.Drawing.Point(117, 446);
-            this.btnGiamSP.Name = "btnGiamSP";
-            this.btnGiamSP.Size = new System.Drawing.Size(40, 40);
-            this.btnGiamSP.TabIndex = 5;
-            this.btnGiamSP.Text = "-";
-            this.btnGiamSP.UseVisualStyleBackColor = true;
-            this.btnGiamSP.Click += new System.EventHandler(this.btnGiamSP_Click);
-            // 
-            // btnThemSP
-            // 
-            this.btnThemSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemSP.Location = new System.Drawing.Point(230, 446);
-            this.btnThemSP.Name = "btnThemSP";
-            this.btnThemSP.Size = new System.Drawing.Size(40, 40);
-            this.btnThemSP.TabIndex = 4;
-            this.btnThemSP.Text = "+";
-            this.btnThemSP.UseVisualStyleBackColor = true;
-            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
-            // 
-            // lbSoLuong
-            // 
-            this.lbSoLuong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoLuong.Location = new System.Drawing.Point(163, 446);
-            this.lbSoLuong.Name = "lbSoLuong";
-            this.lbSoLuong.Size = new System.Drawing.Size(61, 40);
-            this.lbSoLuong.TabIndex = 3;
-            this.lbSoLuong.Text = "1";
-            this.lbSoLuong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -310,7 +284,7 @@
             this.pbGioHang.BackgroundImage = global::ShoppingOnline.Properties.Resources._353439_basket_purse_shopping_cart_ecommerce_icon;
             this.pbGioHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbGioHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbGioHang.Location = new System.Drawing.Point(1125, 20);
+            this.pbGioHang.Location = new System.Drawing.Point(1140, 20);
             this.pbGioHang.Name = "pbGioHang";
             this.pbGioHang.Size = new System.Drawing.Size(73, 43);
             this.pbGioHang.TabIndex = 15;
@@ -321,7 +295,7 @@
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(972, 20);
+            this.label8.Location = new System.Drawing.Point(987, 20);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 43);
             this.label8.TabIndex = 6;
@@ -343,6 +317,8 @@
             this.Load += new System.EventHandler(this.ProductInfo_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.pnThongTinSP.ResumeLayout(false);
             this.pnThongTinSP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbDetail)).EndInit();
@@ -356,11 +332,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel pnThongTinSP;
-        private System.Windows.Forms.Button btnMua;
         private System.Windows.Forms.Button btnThemGioHang;
-        private System.Windows.Forms.Button btnGiamSP;
-        private System.Windows.Forms.Button btnThemSP;
-        private System.Windows.Forms.Label lbSoLuong;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbGiaSP;
         private System.Windows.Forms.Label lbTenSP;
@@ -377,5 +349,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pbGioHang;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txtSoLuong;
     }
 }

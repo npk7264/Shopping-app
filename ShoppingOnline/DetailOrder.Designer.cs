@@ -37,8 +37,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanelCart = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnTien = new System.Windows.Forms.Panel();
+            this.lbTongTien = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnIndex.SuspendLayout();
+            this.pnTien.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,7 +84,7 @@
             this.pnIndex.Controls.Add(this.label3);
             this.pnIndex.Controls.Add(this.label2);
             this.pnIndex.Controls.Add(this.label1);
-            this.pnIndex.Location = new System.Drawing.Point(12, 122);
+            this.pnIndex.Location = new System.Drawing.Point(12, 113);
             this.pnIndex.Name = "pnIndex";
             this.pnIndex.Size = new System.Drawing.Size(1316, 45);
             this.pnIndex.TabIndex = 16;
@@ -89,11 +93,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(887, 8);
+            this.label4.Location = new System.Drawing.Point(854, 8);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 29);
+            this.label4.Size = new System.Drawing.Size(203, 29);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Thành tiền";
+            this.label4.Text = "Thành tiền (đồng)";
             // 
             // label3
             // 
@@ -109,11 +113,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(416, 8);
+            this.label2.Location = new System.Drawing.Point(373, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 29);
+            this.label2.Size = new System.Drawing.Size(173, 29);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Đơn giá";
+            this.label2.Text = "Đơn giá (đồng)";
             // 
             // label1
             // 
@@ -129,16 +133,49 @@
             // 
             this.flowLayoutPanelCart.AutoScroll = true;
             this.flowLayoutPanelCart.BackColor = System.Drawing.SystemColors.Control;
-            this.flowLayoutPanelCart.Location = new System.Drawing.Point(12, 177);
+            this.flowLayoutPanelCart.Location = new System.Drawing.Point(12, 164);
             this.flowLayoutPanelCart.Name = "flowLayoutPanelCart";
-            this.flowLayoutPanelCart.Size = new System.Drawing.Size(1316, 551);
+            this.flowLayoutPanelCart.Size = new System.Drawing.Size(1316, 391);
             this.flowLayoutPanelCart.TabIndex = 17;
+            // 
+            // pnTien
+            // 
+            this.pnTien.Controls.Add(this.lbTongTien);
+            this.pnTien.Controls.Add(this.label6);
+            this.pnTien.Location = new System.Drawing.Point(12, 574);
+            this.pnTien.Name = "pnTien";
+            this.pnTien.Size = new System.Drawing.Size(1316, 154);
+            this.pnTien.TabIndex = 18;
+            // 
+            // lbTongTien
+            // 
+            this.lbTongTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTongTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(0)))), ((int)(((byte)(23)))));
+            this.lbTongTien.Location = new System.Drawing.Point(1042, 47);
+            this.lbTongTien.Name = "lbTongTien";
+            this.lbTongTien.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbTongTien.Size = new System.Drawing.Size(251, 29);
+            this.lbTongTien.TabIndex = 6;
+            this.lbTongTien.Text = "10000";
+            this.lbTongTien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1096, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(192, 29);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Tổng tiền (đồng)";
             // 
             // DetailOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1340, 740);
+            this.Controls.Add(this.pnTien);
             this.Controls.Add(this.pnIndex);
             this.Controls.Add(this.flowLayoutPanelCart);
             this.Controls.Add(this.panel1);
@@ -149,6 +186,8 @@
             this.panel1.ResumeLayout(false);
             this.pnIndex.ResumeLayout(false);
             this.pnIndex.PerformLayout();
+            this.pnTien.ResumeLayout(false);
+            this.pnTien.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -164,5 +203,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCart;
+        private System.Windows.Forms.Panel pnTien;
+        private System.Windows.Forms.Label lbTongTien;
+        private System.Windows.Forms.Label label6;
     }
 }

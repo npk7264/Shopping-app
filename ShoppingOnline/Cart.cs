@@ -54,7 +54,7 @@ namespace ShoppingOnline
             {
                 pnIndex.Visible = true;
                 pnTien.Visible = true;
-                List<string> sp_in_cart = Functions.GetFieldValuesList("select TenSP from GIOHANG where ID = " + max1);
+                List<string> sp_in_cart = Functions.GetFieldValuesList("select TenSP from GIOHANG where ID = " + max1.ToString());
                 foreach (string sp in sp_in_cart)
                 {
                     Panel p = new Panel();
@@ -88,7 +88,7 @@ namespace ShoppingOnline
                     price_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                     // Quantity label
                     Label quantity_lb = new Label();
-                    quantity_lb.Text = Functions.GetFieldValues("select SoLuong from GIOHANG where TenSP = N'" + sp + "' and ID = " + max1);
+                    quantity_lb.Text = Functions.GetFieldValues("select SoLuong from GIOHANG where TenSP = N'" + sp + "' and ID = " + max1.ToString());
                     quantity_lb.Location = new Point(520, 38);
                     quantity_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                     // Total price label
@@ -113,7 +113,7 @@ namespace ShoppingOnline
                     flowLayoutPanelCart.Controls.Add(p);
                     cart_product = flowLayoutPanelCart;
                 }
-                lbTongTien.Text = Functions.GetFieldValues("select SUM(ThanhTien) from GIOHANG where ID = " + max1);
+                lbTongTien.Text = Functions.GetFieldValues("select SUM(ThanhTien) from GIOHANG where ID = " + max1.ToString());
                 pCart = pnCart;
             }
         }

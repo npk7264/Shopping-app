@@ -78,6 +78,7 @@ namespace ShoppingOnline
                 p.Controls.Add(total_lb);
                 flowLayoutPanelCart.Controls.Add(p);
             }
+            lbTongTien.Text = Functions.GetFieldValues("select SUM(ThanhTien) from GIOHANG where ID = " + max1);
         }
     }
 }

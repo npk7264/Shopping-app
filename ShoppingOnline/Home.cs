@@ -59,6 +59,8 @@ namespace ShoppingOnline
                 Label name_lb = new Label();
                 name_lb.Text = Convert.ToString(Functions.GetFieldValues(
                     "select TenSP from SANPHAM where TenFile = N'" + path + "'"));
+                if (name_lb.Text.Length > 28)
+                    name_lb.Text = name_lb.Text.Substring(0, 25) + "...";
                 name_lb.TextAlign = ContentAlignment.MiddleCenter;
                 name_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                 name_lb.AutoSize = false;
@@ -192,6 +194,8 @@ namespace ShoppingOnline
                         Label name_lb = new Label();
                         name_lb.Text = Convert.ToString(Functions.GetFieldValues(
                             "select TenSP from SANPHAM where TenFile = N'" + path + "'"));
+                        if (name_lb.Text.Length > 28)
+                            name_lb.Text = name_lb.Text.Substring(0, 25) + "...";
                         name_lb.TextAlign = ContentAlignment.MiddleCenter;
                         name_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                         name_lb.AutoSize = false;
@@ -270,6 +274,8 @@ namespace ShoppingOnline
                             Label name_lb = new Label();
                             name_lb.Text = Convert.ToString(Functions.GetFieldValues(
                                 "select TenSP from SANPHAM where TenFile = N'" + path + "'"));
+                            if (name_lb.Text.Length > 28)
+                                name_lb.Text = name_lb.Text.Substring(0, 25) + "...";
                             name_lb.TextAlign = ContentAlignment.MiddleCenter;
                             name_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                             name_lb.AutoSize = false;
