@@ -34,7 +34,7 @@
             this.btnNuoc = new System.Windows.Forms.Button();
             this.btnBanh = new System.Windows.Forms.Button();
             this.txtTimSP = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbOrder = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSPDaXem = new System.Windows.Forms.Button();
@@ -125,16 +125,18 @@
             this.txtTimSP.TabIndex = 5;
             this.txtTimSP.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimSP_KeyUp);
             // 
-            // label1
+            // lbOrder
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(987, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 43);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Đơn hàng";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbOrder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbOrder.ForeColor = System.Drawing.SystemColors.Window;
+            this.lbOrder.Location = new System.Drawing.Point(987, 20);
+            this.lbOrder.Name = "lbOrder";
+            this.lbOrder.Size = new System.Drawing.Size(125, 43);
+            this.lbOrder.TabIndex = 6;
+            this.lbOrder.Text = "Đơn hàng";
+            this.lbOrder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbOrder.Click += new System.EventHandler(this.lbOrder_Click);
             // 
             // panel1
             // 
@@ -197,7 +199,7 @@
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pbGioHang);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lbOrder);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
@@ -299,7 +301,7 @@
         private System.Windows.Forms.Button btnNuoc;
         private System.Windows.Forms.Button btnBanh;
         private System.Windows.Forms.TextBox txtTimSP;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbOrder;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
         private System.Windows.Forms.PictureBox pbSearchIcon;

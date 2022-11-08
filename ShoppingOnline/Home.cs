@@ -367,5 +367,11 @@ namespace ShoppingOnline
         {
             Application.Exit();
         }
+
+        private void lbOrder_Click(object sender, EventArgs e)
+        {
+            Order frm = new Order();
+            frm.ShowDialog();
+        }
     }
 }
