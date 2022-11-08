@@ -40,7 +40,16 @@ namespace ShoppingOnline
                 max2 = 0;
 
             if ((max1 == max2 && max2 != 0) || max1 == 0)
-                MessageBox.Show("Chưa có sản phẩm nào trong giỏ hàng");
+            {
+                Label notice = new Label();
+                notice.Text = "Bạn chưa thêm sản phẩm nào vào giỏ hàng";
+                notice.Font = new Font("Arial", 20, FontStyle.Regular);
+                pnCart.Controls.Add(notice);
+                notice.BringToFront();
+                notice.Size = pnCart.Size;
+                notice.TextAlign = ContentAlignment.MiddleCenter;
+                return;
+            }
             else
             {
                 pnIndex.Visible = true;
@@ -125,8 +134,13 @@ namespace ShoppingOnline
             if (flowLayoutPanelCart.Controls.Count == 0)
             {
                 pnCart.Controls.Clear();
-                MessageBox.Show("Không có sản phẩm nào trong giỏ hàng");
-                this.Close();
+                Label notice = new Label();
+                notice.Text = "Bạn chưa thêm sản phẩm nào vào giỏ hàng";
+                notice.Font = new Font("Arial", 20, FontStyle.Regular);
+                pnCart.Controls.Add(notice);
+                notice.BringToFront();
+                notice.Size = pnCart.Size;
+                notice.TextAlign = ContentAlignment.MiddleCenter;
             }
         }
 

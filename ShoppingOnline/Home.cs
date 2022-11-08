@@ -303,25 +303,8 @@ namespace ShoppingOnline
 
         private void pbGioHang_Click(object sender, EventArgs e)
         {
-            int max1;
-            if (Convert.ToInt32(Functions.GetFieldValues("select COUNT(ID) from GIOHANG")) != 0)
-                max1 = Convert.ToInt32(Functions.GetFieldValues("select MAX(ID) from GIOHANG"));
-            else
-                max1 = 0;
-            int max2;
-            if (Convert.ToInt32(Functions.GetFieldValues("select COUNT(ID) from DONHANG")) != 0)
-                max2 = Convert.ToInt32(Functions.GetFieldValues("select MAX(ID) from DONHANG"));
-            else
-                max2 = 0;
-
-            if ((max1 == max2 && max2 != 0) || max1 == 0)
-                MessageBox.Show("Chưa có sản phẩm nào trong giỏ hàng");
-            else
-            {
-                Cart frm = new Cart();
-                frm.ShowDialog();
-                this.Close();
-            }
+            Cart frm = new Cart();
+            frm.ShowDialog();
         }
 
         private void btnSPDaXem_Click(object sender, EventArgs e)

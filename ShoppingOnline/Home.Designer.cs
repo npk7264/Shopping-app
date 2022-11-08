@@ -129,7 +129,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(972, 20);
+            this.label1.Location = new System.Drawing.Point(987, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 43);
             this.label1.TabIndex = 6;
@@ -223,7 +223,7 @@
             this.pbGioHang.BackgroundImage = global::ShoppingOnline.Properties.Resources._353439_basket_purse_shopping_cart_ecommerce_icon;
             this.pbGioHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbGioHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbGioHang.Location = new System.Drawing.Point(1125, 20);
+            this.pbGioHang.Location = new System.Drawing.Point(1140, 20);
             this.pbGioHang.Name = "pbGioHang";
             this.pbGioHang.Size = new System.Drawing.Size(73, 43);
             this.pbGioHang.TabIndex = 15;

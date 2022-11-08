@@ -83,10 +83,25 @@ namespace ShoppingOnline
 
         private void btnThanhToan_Click_1(object sender, EventArgs e)
         {
+            if (txtTen.Text.Trim() == "" || txtSoDienThoai.Text.Trim() == "" || txtDiaChi.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn phải nhập đầy đủ thông tin nhận hàng");
+                return;
+            }
             string id = Functions.GetFieldValues("select MAX(ID) from GIOHANG");
-            string so_sp = "10";
-            Functions.RunSQL("insert into DONHANG values(" + id + ", " + so_sp + ", " + lbTien.Text + ")");
+            string so_sp = Functions.GetFieldValues("select COUNT(TenSP) from GIOHANG where ID = " + id);
+            Functions.RunSQL("insert into DONHANG values(" +
+                id + ", " +
+                so_sp + ", " +
+                lbTien.Text + ", N'" + txtTen.Text.Trim() + "', " + txtSoDienThoai.Text.Trim() + ", N'" + txtDiaChi.Text.Trim() + "')");
             Cart.pCart.Controls.Clear();
+            Label notice = new Label();
+            notice.Text = "Bạn chưa thêm sản phẩm nào vào giỏ hàng";
+            notice.Font = new Font("Arial", 20, FontStyle.Regular);
+            Cart.pCart.Controls.Add(notice);
+            notice.BringToFront();
+            notice.Size = Cart.pCart.Size;
+            notice.TextAlign = ContentAlignment.MiddleCenter;
             this.Close();
         }
     }
