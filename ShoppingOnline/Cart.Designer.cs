@@ -42,16 +42,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.pnCart = new System.Windows.Forms.Panel();
             this.pnIndex.SuspendLayout();
             this.pnTien.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.pnCart.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanelCart
             // 
             this.flowLayoutPanelCart.AutoScroll = true;
             this.flowLayoutPanelCart.BackColor = System.Drawing.SystemColors.Control;
-            this.flowLayoutPanelCart.Location = new System.Drawing.Point(12, 165);
+            this.flowLayoutPanelCart.Location = new System.Drawing.Point(8, 63);
             this.flowLayoutPanelCart.Name = "flowLayoutPanelCart";
             this.flowLayoutPanelCart.Size = new System.Drawing.Size(1316, 391);
             this.flowLayoutPanelCart.TabIndex = 0;
@@ -74,7 +76,7 @@
             this.pnIndex.Controls.Add(this.label3);
             this.pnIndex.Controls.Add(this.label2);
             this.pnIndex.Controls.Add(this.label1);
-            this.pnIndex.Location = new System.Drawing.Point(12, 110);
+            this.pnIndex.Location = new System.Drawing.Point(8, 8);
             this.pnIndex.Name = "pnIndex";
             this.pnIndex.Size = new System.Drawing.Size(1316, 45);
             this.pnIndex.TabIndex = 0;
@@ -158,7 +160,7 @@
             this.pnTien.Controls.Add(this.btnThanhToan);
             this.pnTien.Controls.Add(this.lbTongTien);
             this.pnTien.Controls.Add(this.label6);
-            this.pnTien.Location = new System.Drawing.Point(12, 574);
+            this.pnTien.Location = new System.Drawing.Point(8, 472);
             this.pnTien.Name = "pnTien";
             this.pnTien.Size = new System.Drawing.Size(1316, 154);
             this.pnTien.TabIndex = 7;
@@ -198,15 +200,23 @@
             this.label8.Text = "Đơn hàng";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pnCart
+            // 
+            this.pnCart.Controls.Add(this.pnIndex);
+            this.pnCart.Controls.Add(this.pnTien);
+            this.pnCart.Controls.Add(this.flowLayoutPanelCart);
+            this.pnCart.Location = new System.Drawing.Point(3, 101);
+            this.pnCart.Name = "pnCart";
+            this.pnCart.Size = new System.Drawing.Size(1332, 635);
+            this.pnCart.TabIndex = 15;
+            // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1340, 740);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pnTien);
-            this.Controls.Add(this.pnIndex);
-            this.Controls.Add(this.flowLayoutPanelCart);
+            this.Controls.Add(this.pnCart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Cart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -217,6 +227,7 @@
             this.pnTien.ResumeLayout(false);
             this.pnTien.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.pnCart.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -237,5 +248,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel pnCart;
     }
 }

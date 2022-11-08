@@ -86,7 +86,8 @@ namespace ShoppingOnline
             string id = Functions.GetFieldValues("select MAX(ID) from GIOHANG");
             string so_sp = "10";
             Functions.RunSQL("insert into DONHANG values(" + id + ", " + so_sp + ", " + lbTien.Text + ")");
-            Cart.flp.Controls.Clear();
+            Cart.pCart.Controls.Clear();
+            this.Close();
         }
     }
 }

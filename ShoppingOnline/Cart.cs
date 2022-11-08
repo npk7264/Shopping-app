@@ -12,7 +12,7 @@ namespace ShoppingOnline
 {
     public partial class Cart : Form
     {
-        public static FlowLayoutPanel flp = new FlowLayoutPanel();
+        public static Panel pCart = new Panel();
         public Cart()
         {
             InitializeComponent();
@@ -105,7 +105,7 @@ namespace ShoppingOnline
                     cart_product = flowLayoutPanelCart;
                 }
                 lbTongTien.Text = Functions.GetFieldValues("select SUM(ThanhTien) from GIOHANG where ID = " + max1);
-                flp = flowLayoutPanelCart;
+                pCart = pnCart;
             }
         }
 
@@ -117,11 +117,14 @@ namespace ShoppingOnline
             Control name_lb = x.Controls[1];
             x.Controls.Remove(name_lb);
             flowLayoutPanelCart.Controls.Remove(x);
-            Functions.RunSQL("delete from GIOHANG where TenSP = N'" + name_lb.Text + "'");
-            lbTongTien.Text = Functions.GetFieldValues("select SUM(ThanhTien) from GIOHANG");
-            flp = flowLayoutPanelCart;
+
+            string id = Functions.GetFieldValues("select MAX(ID) from GIOHANG");
+            Functions.RunSQL("delete from GIOHANG where TenSP = N'" + name_lb.Text + "' and ID = " + id);
+            lbTongTien.Text = Functions.GetFieldValues("select SUM(ThanhTien) from GIOHANG where ID = " + id);
+            pCart = pnCart;
             if (flowLayoutPanelCart.Controls.Count == 0)
             {
+                pnCart.Controls.Clear();
                 MessageBox.Show("Không có sản phẩm nào trong giỏ hàng");
                 this.Close();
             }
