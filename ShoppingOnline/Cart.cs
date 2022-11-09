@@ -42,7 +42,7 @@ namespace ShoppingOnline
             if ((max1 == max2 && max2 != 0) || max1 == 0)
             {
                 Label notice = new Label();
-                notice.Text = "Bạn chưa thêm sản phẩm nào vào giỏ hàng";
+                notice.Text = "Giỏ hàng trống";
                 notice.Font = new Font("Arial", 20, FontStyle.Regular);
                 pnCart.Controls.Add(notice);
                 notice.BringToFront();

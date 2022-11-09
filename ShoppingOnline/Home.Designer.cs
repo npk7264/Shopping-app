@@ -119,9 +119,9 @@
             this.txtTimSP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTimSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimSP.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.txtTimSP.Location = new System.Drawing.Point(12, 11);
+            this.txtTimSP.Location = new System.Drawing.Point(9, 11);
             this.txtTimSP.Name = "txtTimSP";
-            this.txtTimSP.Size = new System.Drawing.Size(459, 27);
+            this.txtTimSP.Size = new System.Drawing.Size(463, 27);
             this.txtTimSP.TabIndex = 5;
             this.txtTimSP.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimSP_KeyUp);
             // 
@@ -130,7 +130,7 @@
             this.lbOrder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOrder.ForeColor = System.Drawing.SystemColors.Window;
-            this.lbOrder.Location = new System.Drawing.Point(987, 20);
+            this.lbOrder.Location = new System.Drawing.Point(988, 20);
             this.lbOrder.Name = "lbOrder";
             this.lbOrder.Size = new System.Drawing.Size(125, 43);
             this.lbOrder.TabIndex = 6;
@@ -189,9 +189,9 @@
             // flowLayoutPanel
             // 
             this.flowLayoutPanel.AutoScroll = true;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(383, 114);
+            this.flowLayoutPanel.Location = new System.Drawing.Point(395, 114);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(945, 612);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(933, 612);
             this.flowLayoutPanel.TabIndex = 11;
             // 
             // panel2
@@ -237,7 +237,7 @@
             this.panel3.BackColor = System.Drawing.SystemColors.Window;
             this.panel3.Controls.Add(this.txtTimSP);
             this.panel3.Controls.Add(this.pbSearchIcon);
-            this.panel3.Location = new System.Drawing.Point(371, 16);
+            this.panel3.Location = new System.Drawing.Point(383, 16);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(559, 50);
             this.panel3.TabIndex = 14;

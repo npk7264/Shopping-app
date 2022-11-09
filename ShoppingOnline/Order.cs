@@ -20,6 +20,20 @@ namespace ShoppingOnline
 
         private void Order_Load(object sender, EventArgs e)
         {
+            int count_order = Convert.ToInt32(Functions.GetFieldValues("select COUNT(ID) from DONHANG"));
+            if(count_order == 0)
+            {
+                flowLayoutPanelOrder.AutoScroll = false;
+                Label notice = new Label();
+                notice.Text = "Chưa có đơn hàng nào";
+                notice.Font = new Font("Arial", 20, FontStyle.Regular);
+                flowLayoutPanelOrder.Controls.Add(notice);
+                notice.BringToFront();
+                notice.Size = flowLayoutPanelOrder.Size;
+                notice.TextAlign = ContentAlignment.MiddleCenter;
+                return;
+            }
+
             flowLayoutPanelOrder.AutoScroll = false;
             flowLayoutPanelOrder.HorizontalScroll.Enabled = false;
             flowLayoutPanelOrder.HorizontalScroll.Visible = false;

@@ -64,7 +64,7 @@ namespace ShoppingOnline
                 name_lb.TextAlign = ContentAlignment.MiddleCenter;
                 name_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                 name_lb.AutoSize = false;
-                name_lb.Width = 240;
+                name_lb.Width = 220;
                 name_lb.Location = new Point(0, 175);
                 name_lb.MouseClick += new MouseEventHandler(this._lbClick);
                 // Price label
@@ -75,7 +75,7 @@ namespace ShoppingOnline
                 price_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                 price_lb.ForeColor = Color.FromArgb(193, 0, 23);
                 price_lb.AutoSize = false;
-                price_lb.Width = 240;
+                price_lb.Width = 220;
                 price_lb.Location = new Point(0, 200);
                 price_lb.MouseClick += new MouseEventHandler(this._lbClick);
                 // Add to panel
@@ -199,18 +199,18 @@ namespace ShoppingOnline
                         name_lb.TextAlign = ContentAlignment.MiddleCenter;
                         name_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                         name_lb.AutoSize = false;
-                        name_lb.Width = 240;
+                        name_lb.Width = 220;
                         name_lb.Location = new Point(0, 175);
                         name_lb.MouseClick += new MouseEventHandler(this._lbClick);
                         // Price label
                         Label price_lb = new Label();
                         price_lb.Text = Convert.ToString(Functions.GetFieldValues(
-                            "select GiaSP from SANPHAM where TenFile = N'" + path + "'"));
+                            "select GiaSP from SANPHAM where TenFile = N'" + path + "'")) + " đồng";
                         price_lb.TextAlign = ContentAlignment.MiddleCenter;
                         price_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                         price_lb.ForeColor = Color.FromArgb(193, 0, 23);
                         price_lb.AutoSize = false;
-                        price_lb.Width = 240;
+                        price_lb.Width = 220;
                         price_lb.Location = new Point(0, 200);
                         price_lb.MouseClick += new MouseEventHandler(this._lbClick);
                         // Add to panel
@@ -279,18 +279,18 @@ namespace ShoppingOnline
                             name_lb.TextAlign = ContentAlignment.MiddleCenter;
                             name_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                             name_lb.AutoSize = false;
-                            name_lb.Width = 240;
+                            name_lb.Width = 220;
                             name_lb.Location = new Point(0, 175);
                             name_lb.MouseClick += new MouseEventHandler(this._lbClick);
                             // Price label
                             Label price_lb = new Label();
                             price_lb.Text = Convert.ToString(Functions.GetFieldValues(
-                                "select GiaSP from SANPHAM where TenFile = N'" + path + "'"));
+                                "select GiaSP from SANPHAM where TenFile = N'" + path + "'")) + " đồng";
                             price_lb.TextAlign = ContentAlignment.MiddleCenter;
                             price_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                             price_lb.ForeColor = Color.FromArgb(193, 0, 23);
                             price_lb.AutoSize = false;
-                            price_lb.Width = 240;
+                            price_lb.Width = 220;
                             price_lb.Location = new Point(0, 200);
                             price_lb.MouseClick += new MouseEventHandler(this._lbClick);
                             // Add to panel
@@ -341,9 +341,11 @@ namespace ShoppingOnline
                 name_lb.Text = Convert.ToString(Functions.GetFieldValues(
                     "select TenSP from SANPHAM where TenFile = N'" + path + "'"));
                 name_lb.TextAlign = ContentAlignment.MiddleCenter;
+                if (name_lb.Text.Length > 28)
+                    name_lb.Text = name_lb.Text.Substring(0, 25) + "...";
                 name_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                 name_lb.AutoSize = false;
-                name_lb.Width = 240;
+                name_lb.Width = 220;
                 name_lb.Location = new Point(0, 175);
                 name_lb.MouseClick += new MouseEventHandler(this._lbClick);
                 // Price label
@@ -354,7 +356,7 @@ namespace ShoppingOnline
                 price_lb.Font = new Font("Arial", 12, FontStyle.Regular);
                 price_lb.ForeColor = Color.FromArgb(193, 0, 23);
                 price_lb.AutoSize = false;
-                price_lb.Width = 240;
+                price_lb.Width = 220;
                 price_lb.Location = new Point(0, 200);
                 price_lb.MouseClick += new MouseEventHandler(this._lbClick);
                 // Add to panel
