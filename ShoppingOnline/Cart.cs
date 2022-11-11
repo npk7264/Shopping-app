@@ -157,5 +157,10 @@ namespace ShoppingOnline
         {
             this.Close();
         }
+
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

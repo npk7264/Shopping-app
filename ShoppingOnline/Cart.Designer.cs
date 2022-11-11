@@ -40,13 +40,16 @@
             this.lbTongTien = new System.Windows.Forms.Label();
             this.pnTien = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pnCart = new System.Windows.Forms.Panel();
+            this.pbBack = new System.Windows.Forms.PictureBox();
+            this.pbHome = new System.Windows.Forms.PictureBox();
             this.pnIndex.SuspendLayout();
             this.pnTien.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnCart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanelCart
@@ -174,25 +177,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
-            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.pbBack);
+            this.panel1.Controls.Add(this.pbHome);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1316, 83);
+            this.panel1.Size = new System.Drawing.Size(1340, 83);
             this.panel1.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(32, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(305, 83);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Grocery";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -215,6 +206,31 @@
             this.pnCart.Size = new System.Drawing.Size(1332, 635);
             this.pnCart.TabIndex = 15;
             // 
+            // pbBack
+            // 
+            this.pbBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
+            this.pbBack.BackgroundImage = global::ShoppingOnline.Properties.Resources._1564492_navigation_back_arrow_left_icon;
+            this.pbBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbBack.Location = new System.Drawing.Point(78, 20);
+            this.pbBack.Name = "pbBack";
+            this.pbBack.Size = new System.Drawing.Size(73, 43);
+            this.pbBack.TabIndex = 19;
+            this.pbBack.TabStop = false;
+            this.pbBack.Click += new System.EventHandler(this.pbBack_Click);
+            // 
+            // pbHome
+            // 
+            this.pbHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
+            this.pbHome.BackgroundImage = global::ShoppingOnline.Properties.Resources._216242_home_icon;
+            this.pbHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbHome.Location = new System.Drawing.Point(208, 20);
+            this.pbHome.Name = "pbHome";
+            this.pbHome.Size = new System.Drawing.Size(73, 43);
+            this.pbHome.TabIndex = 18;
+            this.pbHome.TabStop = false;
+            // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -222,7 +238,7 @@
             this.ClientSize = new System.Drawing.Size(1340, 740);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnCart);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cart";
@@ -233,6 +249,8 @@
             this.pnTien.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.pnCart.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -251,8 +269,9 @@
         private System.Windows.Forms.Label lbTongTien;
         private System.Windows.Forms.Panel pnTien;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel pnCart;
+        private System.Windows.Forms.PictureBox pbBack;
+        private System.Windows.Forms.PictureBox pbHome;
     }
 }

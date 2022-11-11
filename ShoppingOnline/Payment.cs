@@ -107,5 +107,10 @@ namespace ShoppingOnline
             notice.TextAlign = ContentAlignment.MiddleCenter;
             this.Close();
         }
+
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

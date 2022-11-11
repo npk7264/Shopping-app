@@ -88,5 +88,15 @@ namespace ShoppingOnline
             if (txtSoLuong.Text != "1")
                 txtSoLuong.Text = (Int32.Parse(txtSoLuong.Text) - 1).ToString();
         }
+
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbHome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

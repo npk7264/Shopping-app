@@ -169,5 +169,10 @@ namespace ShoppingOnline
             Control panel = lb_click.Parent;
             order_click(panel, e);
         }
+
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

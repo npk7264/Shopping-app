@@ -36,6 +36,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnThit = new System.Windows.Forms.Button();
             this.btnRau = new System.Windows.Forms.Button();
             this.btnNuoc = new System.Windows.Forms.Button();
@@ -43,8 +46,6 @@
             this.btnMi = new System.Windows.Forms.Button();
             this.pbGioHang = new System.Windows.Forms.PictureBox();
             this.pbSearchIcon = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbGioHang)).BeginInit();
@@ -70,7 +71,7 @@
             this.lbOrder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOrder.ForeColor = System.Drawing.SystemColors.Window;
-            this.lbOrder.Location = new System.Drawing.Point(988, 20);
+            this.lbOrder.Location = new System.Drawing.Point(1012, 20);
             this.lbOrder.Name = "lbOrder";
             this.lbOrder.Size = new System.Drawing.Size(125, 43);
             this.lbOrder.TabIndex = 6;
@@ -89,7 +90,7 @@
             this.btnSPDaXem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSPDaXem.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSPDaXem.ForeColor = System.Drawing.Color.Black;
-            this.btnSPDaXem.Location = new System.Drawing.Point(12, 591);
+            this.btnSPDaXem.Location = new System.Drawing.Point(0, 591);
             this.btnSPDaXem.Name = "btnSPDaXem";
             this.btnSPDaXem.Size = new System.Drawing.Size(375, 65);
             this.btnSPDaXem.TabIndex = 7;
@@ -101,21 +102,21 @@
             // flowLayoutPanel
             // 
             this.flowLayoutPanel.AutoScroll = true;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(395, 114);
+            this.flowLayoutPanel.Location = new System.Drawing.Point(407, 165);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(933, 612);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(933, 551);
             this.flowLayoutPanel.TabIndex = 11;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(255)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pbGioHang);
             this.panel2.Controls.Add(this.lbOrder);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1316, 83);
+            this.panel2.Size = new System.Drawing.Size(1340, 83);
             this.panel2.TabIndex = 13;
             // 
             // label4
@@ -136,22 +137,65 @@
             this.panel3.BackColor = System.Drawing.SystemColors.Window;
             this.panel3.Controls.Add(this.txtTimSP);
             this.panel3.Controls.Add(this.pbSearchIcon);
-            this.panel3.Location = new System.Drawing.Point(383, 16);
+            this.panel3.Location = new System.Drawing.Point(411, 16);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(559, 50);
             this.panel3.TabIndex = 14;
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(255)))));
-            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 114);
+            this.label1.Location = new System.Drawing.Point(0, 110);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(375, 65);
+            this.label1.Size = new System.Drawing.Size(375, 55);
             this.label1.TabIndex = 20;
             this.label1.Text = "MENU";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(0, 535);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(375, 55);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "KHÁC";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(0, 661);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(375, 65);
+            this.button1.TabIndex = 22;
+            this.button1.TabStop = false;
+            this.button1.Text = "Thoát";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(411, 110);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(929, 55);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "SẢN PHẨM";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnThit
             // 
@@ -166,7 +210,7 @@
             this.btnThit.ForeColor = System.Drawing.Color.Black;
             this.btnThit.Image = global::ShoppingOnline.Properties.Resources._580b57fbd9996e24bc43c0cd;
             this.btnThit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThit.Location = new System.Drawing.Point(12, 179);
+            this.btnThit.Location = new System.Drawing.Point(0, 165);
             this.btnThit.Name = "btnThit";
             this.btnThit.Size = new System.Drawing.Size(375, 65);
             this.btnThit.TabIndex = 15;
@@ -190,7 +234,7 @@
             this.btnRau.ForeColor = System.Drawing.Color.Black;
             this.btnRau.Image = global::ShoppingOnline.Properties.Resources._585ea83dcb11b227491c3546;
             this.btnRau.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRau.Location = new System.Drawing.Point(12, 244);
+            this.btnRau.Location = new System.Drawing.Point(0, 230);
             this.btnRau.Name = "btnRau";
             this.btnRau.Size = new System.Drawing.Size(375, 65);
             this.btnRau.TabIndex = 16;
@@ -214,7 +258,7 @@
             this.btnNuoc.ForeColor = System.Drawing.Color.Black;
             this.btnNuoc.Image = global::ShoppingOnline.Properties.Resources._587e33a39686194a55adab81;
             this.btnNuoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuoc.Location = new System.Drawing.Point(12, 439);
+            this.btnNuoc.Location = new System.Drawing.Point(0, 425);
             this.btnNuoc.Name = "btnNuoc";
             this.btnNuoc.Size = new System.Drawing.Size(375, 65);
             this.btnNuoc.TabIndex = 18;
@@ -238,7 +282,7 @@
             this.btnBanh.ForeColor = System.Drawing.Color.Black;
             this.btnBanh.Image = global::ShoppingOnline.Properties.Resources._580b57fbd9996e24bc43c0b2;
             this.btnBanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBanh.Location = new System.Drawing.Point(12, 374);
+            this.btnBanh.Location = new System.Drawing.Point(0, 360);
             this.btnBanh.Name = "btnBanh";
             this.btnBanh.Size = new System.Drawing.Size(375, 65);
             this.btnBanh.TabIndex = 19;
@@ -262,7 +306,7 @@
             this.btnMi.ForeColor = System.Drawing.Color.Black;
             this.btnMi.Image = global::ShoppingOnline.Properties.Resources._589c825364b351149f22a826;
             this.btnMi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMi.Location = new System.Drawing.Point(12, 309);
+            this.btnMi.Location = new System.Drawing.Point(0, 295);
             this.btnMi.Name = "btnMi";
             this.btnMi.Size = new System.Drawing.Size(375, 65);
             this.btnMi.TabIndex = 17;
@@ -275,11 +319,11 @@
             // 
             // pbGioHang
             // 
-            this.pbGioHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(255)))));
+            this.pbGioHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
             this.pbGioHang.BackgroundImage = global::ShoppingOnline.Properties.Resources._353439_basket_purse_shopping_cart_ecommerce_icon;
             this.pbGioHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbGioHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbGioHang.Location = new System.Drawing.Point(1140, 20);
+            this.pbGioHang.Location = new System.Drawing.Point(1164, 20);
             this.pbGioHang.Name = "pbGioHang";
             this.pbGioHang.Size = new System.Drawing.Size(73, 43);
             this.pbGioHang.TabIndex = 15;
@@ -288,7 +332,7 @@
             // 
             // pbSearchIcon
             // 
-            this.pbSearchIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(255)))));
+            this.pbSearchIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
             this.pbSearchIcon.BackgroundImage = global::ShoppingOnline.Properties.Resources._211817_search_strong_icon;
             this.pbSearchIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbSearchIcon.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -299,43 +343,13 @@
             this.pbSearchIcon.TabStop = false;
             this.pbSearchIcon.Click += new System.EventHandler(this.pbSearchIcon_Click);
             // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(145)))), ((int)(((byte)(255)))));
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 525);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(375, 65);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "KHÁC";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(12, 661);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(375, 65);
-            this.button1.TabIndex = 22;
-            this.button1.TabStop = false;
-            this.button1.Text = "Thoát";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1340, 740);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -347,7 +361,7 @@
             this.Controls.Add(this.btnMi);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.flowLayoutPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -379,6 +393,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
     }
 }
 

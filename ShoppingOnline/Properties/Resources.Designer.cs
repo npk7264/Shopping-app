@@ -63,9 +63,29 @@ namespace ShoppingOnline.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1564492_navigation_back_arrow_left_icon {
+            get {
+                object obj = ResourceManager.GetObject("1564492_navigation_back_arrow_left_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _211817_search_strong_icon {
             get {
                 object obj = ResourceManager.GetObject("211817_search_strong_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _216242_home_icon {
+            get {
+                object obj = ResourceManager.GetObject("216242_home_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
