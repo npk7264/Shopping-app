@@ -56,62 +56,77 @@
             // 
             // btnThit
             // 
+            this.btnThit.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnThit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThit.ForeColor = System.Drawing.Color.Black;
             this.btnThit.Location = new System.Drawing.Point(5, 69);
             this.btnThit.Name = "btnThit";
             this.btnThit.Size = new System.Drawing.Size(355, 65);
             this.btnThit.TabIndex = 0;
+            this.btnThit.TabStop = false;
             this.btnThit.Text = "Thịt, cá, trứng, hải sản";
-            this.btnThit.UseVisualStyleBackColor = true;
+            this.btnThit.UseVisualStyleBackColor = false;
             this.btnThit.Click += new System.EventHandler(this.btnThit_Click);
             // 
             // btnRau
             // 
+            this.btnRau.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnRau.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRau.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRau.ForeColor = System.Drawing.Color.Black;
             this.btnRau.Location = new System.Drawing.Point(5, 140);
             this.btnRau.Name = "btnRau";
             this.btnRau.Size = new System.Drawing.Size(355, 65);
             this.btnRau.TabIndex = 1;
+            this.btnRau.TabStop = false;
             this.btnRau.Text = "Rau, củ, trái cây";
-            this.btnRau.UseVisualStyleBackColor = true;
+            this.btnRau.UseVisualStyleBackColor = false;
             this.btnRau.Click += new System.EventHandler(this.btnRau_Click);
             // 
             // btnMi
             // 
+            this.btnMi.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnMi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMi.ForeColor = System.Drawing.Color.Black;
             this.btnMi.Location = new System.Drawing.Point(5, 211);
             this.btnMi.Name = "btnMi";
             this.btnMi.Size = new System.Drawing.Size(355, 65);
             this.btnMi.TabIndex = 2;
+            this.btnMi.TabStop = false;
             this.btnMi.Text = "Mì, miến, cháo, phở";
-            this.btnMi.UseVisualStyleBackColor = true;
+            this.btnMi.UseVisualStyleBackColor = false;
             this.btnMi.Click += new System.EventHandler(this.btnMi_Click);
             // 
             // btnNuoc
             // 
+            this.btnNuoc.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnNuoc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuoc.ForeColor = System.Drawing.Color.Black;
             this.btnNuoc.Location = new System.Drawing.Point(5, 353);
             this.btnNuoc.Name = "btnNuoc";
             this.btnNuoc.Size = new System.Drawing.Size(355, 65);
             this.btnNuoc.TabIndex = 3;
-            this.btnNuoc.Text = "Nước ngọt, nước trái cây";
-            this.btnNuoc.UseVisualStyleBackColor = true;
+            this.btnNuoc.TabStop = false;
+            this.btnNuoc.Text = "Thức uống";
+            this.btnNuoc.UseVisualStyleBackColor = false;
             this.btnNuoc.Click += new System.EventHandler(this.btnNuoc_Click);
             // 
             // btnBanh
             // 
+            this.btnBanh.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnBanh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBanh.ForeColor = System.Drawing.Color.Black;
             this.btnBanh.Location = new System.Drawing.Point(5, 282);
             this.btnBanh.Name = "btnBanh";
             this.btnBanh.Size = new System.Drawing.Size(355, 65);
             this.btnBanh.TabIndex = 4;
+            this.btnBanh.TabStop = false;
             this.btnBanh.Text = "Bánh, kẹo";
-            this.btnBanh.UseVisualStyleBackColor = true;
+            this.btnBanh.UseVisualStyleBackColor = false;
             this.btnBanh.Click += new System.EventHandler(this.btnBanh_Click);
             // 
             // txtTimSP
@@ -123,7 +138,10 @@
             this.txtTimSP.Name = "txtTimSP";
             this.txtTimSP.Size = new System.Drawing.Size(463, 27);
             this.txtTimSP.TabIndex = 5;
+            this.txtTimSP.TabStop = false;
+            this.txtTimSP.Enter += new System.EventHandler(this.txtTimSP_Enter);
             this.txtTimSP.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTimSP_KeyUp);
+            this.txtTimSP.Leave += new System.EventHandler(this.txtTimSP_Leave);
             // 
             // lbOrder
             // 
@@ -165,14 +183,17 @@
             // 
             // btnSPDaXem
             // 
+            this.btnSPDaXem.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnSPDaXem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSPDaXem.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSPDaXem.ForeColor = System.Drawing.Color.Black;
             this.btnSPDaXem.Location = new System.Drawing.Point(5, 69);
             this.btnSPDaXem.Name = "btnSPDaXem";
             this.btnSPDaXem.Size = new System.Drawing.Size(355, 65);
             this.btnSPDaXem.TabIndex = 7;
+            this.btnSPDaXem.TabStop = false;
             this.btnSPDaXem.Text = "Sản phẩm đã xem";
-            this.btnSPDaXem.UseVisualStyleBackColor = true;
+            this.btnSPDaXem.UseVisualStyleBackColor = false;
             this.btnSPDaXem.Click += new System.EventHandler(this.btnSPDaXem_Click);
             // 
             // label3

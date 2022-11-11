@@ -35,6 +35,13 @@ namespace ShoppingOnline
 
         private void btnThemGioHang_Click(object sender, EventArgs e)
         {
+            if (txtSoLuong.Text == "")
+            {
+                MessageBox.Show("Bạn phải chọn số lượng sản phẩm");
+                txtSoLuong.Text = "1";
+                return;
+            }
+
             string thanhtien = (Convert.ToInt32(price) * Convert.ToInt32(txtSoLuong.Text)).ToString();
             string sql;
 
@@ -57,6 +64,29 @@ namespace ShoppingOnline
         {
             Cart frm = new Cart();
             frm.ShowDialog();
+        }
+
+        private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((!char.IsDigit(e.KeyChar) && e.KeyChar != 8) || (txtSoLuong.Text == "" && e.KeyChar == '0'))
+                e.Handled = true;
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            Order frm = new Order();
+            frm.ShowDialog();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            txtSoLuong.Text = (Int32.Parse(txtSoLuong.Text) + 1).ToString();
+        }
+
+        private void btnSub_Click(object sender, EventArgs e)
+        {
+            if (txtSoLuong.Text != "1")
+                txtSoLuong.Text = (Int32.Parse(txtSoLuong.Text) - 1).ToString();
         }
     }
 }

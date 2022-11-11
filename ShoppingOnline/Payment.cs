@@ -99,7 +99,7 @@ namespace ShoppingOnline
                 lbTien.Text + ", N'" + txtTen.Text.Trim() + "', " + txtSoDienThoai.Text.Trim() + ", N'" + txtDiaChi.Text.Trim() + "')");
             Cart.pCart.Controls.Clear();
             Label notice = new Label();
-            notice.Text = "Bạn chưa thêm sản phẩm nào vào giỏ hàng";
+            notice.Text = "Giỏ hàng trống";
             notice.Font = new Font("Arial", 20, FontStyle.Regular);
             Cart.pCart.Controls.Add(notice);
             notice.BringToFront();

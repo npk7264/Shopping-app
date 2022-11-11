@@ -71,7 +71,7 @@
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(972, 20);
+            this.label8.Location = new System.Drawing.Point(988, 20);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 43);
             this.label8.TabIndex = 6;
@@ -101,7 +101,7 @@
             this.lbTongTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTongTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(0)))), ((int)(((byte)(23)))));
-            this.lbTongTien.Location = new System.Drawing.Point(1042, 47);
+            this.lbTongTien.Location = new System.Drawing.Point(1039, 47);
             this.lbTongTien.Name = "lbTongTien";
             this.lbTongTien.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbTongTien.Size = new System.Drawing.Size(251, 29);
@@ -113,7 +113,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1096, 9);
+            this.label6.Location = new System.Drawing.Point(1093, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(192, 29);
             this.label6.TabIndex = 5;
@@ -179,6 +179,7 @@
             this.Controls.Add(this.pnTien);
             this.Controls.Add(this.flowLayoutPanelCart);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "DetailOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DetailOrder";

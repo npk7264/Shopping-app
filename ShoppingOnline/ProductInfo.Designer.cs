@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSub = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,6 +62,8 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnSub);
+            this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.pnThongTinSP);
@@ -72,12 +76,38 @@
             this.panel2.Size = new System.Drawing.Size(741, 627);
             this.panel2.TabIndex = 1;
             // 
+            // btnSub
+            // 
+            this.btnSub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSub.Location = new System.Drawing.Point(143, 448);
+            this.btnSub.Name = "btnSub";
+            this.btnSub.Size = new System.Drawing.Size(40, 40);
+            this.btnSub.TabIndex = 13;
+            this.btnSub.TabStop = false;
+            this.btnSub.Text = "-";
+            this.btnSub.UseVisualStyleBackColor = true;
+            this.btnSub.Click += new System.EventHandler(this.btnSub_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(263, 448);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(40, 40);
+            this.btnAdd.TabIndex = 12;
+            this.btnAdd.TabStop = false;
+            this.btnAdd.Text = "+";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Window;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.txtSoLuong);
-            this.panel3.Location = new System.Drawing.Point(134, 447);
+            this.panel3.Location = new System.Drawing.Point(189, 448);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(68, 40);
             this.panel3.TabIndex = 11;
@@ -90,8 +120,10 @@
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(52, 23);
             this.txtSoLuong.TabIndex = 10;
+            this.txtSoLuong.TabStop = false;
             this.txtSoLuong.Text = "1";
             this.txtSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuong_KeyPress);
             // 
             // label5
             // 
@@ -205,13 +237,18 @@
             // 
             // btnThemGioHang
             // 
-            this.btnThemGioHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemGioHang.Location = new System.Drawing.Point(21, 514);
+            this.btnThemGioHang.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnThemGioHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThemGioHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemGioHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemGioHang.ForeColor = System.Drawing.Color.White;
+            this.btnThemGioHang.Location = new System.Drawing.Point(21, 503);
             this.btnThemGioHang.Name = "btnThemGioHang";
-            this.btnThemGioHang.Size = new System.Drawing.Size(248, 50);
+            this.btnThemGioHang.Size = new System.Drawing.Size(282, 61);
             this.btnThemGioHang.TabIndex = 0;
+            this.btnThemGioHang.TabStop = false;
             this.btnThemGioHang.Text = "Thêm vào giỏ hàng";
-            this.btnThemGioHang.UseVisualStyleBackColor = true;
+            this.btnThemGioHang.UseVisualStyleBackColor = false;
             this.btnThemGioHang.Click += new System.EventHandler(this.btnThemGioHang_Click);
             // 
             // label3
@@ -293,14 +330,16 @@
             // 
             // label8
             // 
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(987, 20);
+            this.label8.Location = new System.Drawing.Point(988, 20);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 43);
             this.label8.TabIndex = 6;
             this.label8.Text = "Đơn hàng";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // ProductInfo
             // 
@@ -351,5 +390,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtSoLuong;
+        private System.Windows.Forms.Button btnSub;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

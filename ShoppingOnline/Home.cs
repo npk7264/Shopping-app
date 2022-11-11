@@ -21,6 +21,8 @@ namespace ShoppingOnline
         {
             InitializeComponent();
             Functions.Connect();
+            txtTimSP.Text = "Nhập sản phẩm cần tìm";
+            txtTimSP.ForeColor = Color.Gray;
             foreach (string topic in topic_list)
                 loadData(topic);
             //Functions.RunSQL("delete from SANPHAMDAXEM");
@@ -152,7 +154,7 @@ namespace ShoppingOnline
             string search_string = txtTimSP.Text;
             string[] search_word_list = search_string.Split(' ');
 
-            if (search_string.Trim().Length == 0)
+            if (search_string.Trim().Length == 0 || search_string == "Nhập sản phẩm cần tìm")
             {
                 MessageBox.Show("Hãy nhập tên sản phẩm");
                 return;
@@ -232,7 +234,7 @@ namespace ShoppingOnline
                 string search_string = txtTimSP.Text;
                 string[] search_word_list = search_string.Split(' ');
 
-                if (search_string.Trim().Length == 0)
+                if (search_string.Trim().Length == 0 || search_string == "Nhập sản phẩm cần tìm")
                 {
                     MessageBox.Show("Hãy nhập tên sản phẩm");
                     return;
@@ -380,6 +382,24 @@ namespace ShoppingOnline
         {
             Order frm = new Order();
             frm.ShowDialog();
+        }
+
+        private void txtTimSP_Leave(object sender, EventArgs e)
+        {
+            if (txtTimSP.Text == "")
+            {
+                txtTimSP.Text = "Nhập sản phẩm cần tìm";
+                txtTimSP.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtTimSP_Enter(object sender, EventArgs e)
+        {
+            if (txtTimSP.Text == "Nhập sản phẩm cần tìm")
+            {
+                txtTimSP.Text = "";
+                txtTimSP.ForeColor = Color.Black;
+            }
         }
     }
 }
