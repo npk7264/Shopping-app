@@ -79,5 +79,65 @@ namespace ShoppingOnline.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _580b57fbd9996e24bc43c0b1 {
+            get {
+                object obj = ResourceManager.GetObject("580b57fbd9996e24bc43c0b1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _580b57fbd9996e24bc43c0b2 {
+            get {
+                object obj = ResourceManager.GetObject("580b57fbd9996e24bc43c0b2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _580b57fbd9996e24bc43c0cd {
+            get {
+                object obj = ResourceManager.GetObject("580b57fbd9996e24bc43c0cd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _585ea83dcb11b227491c3546 {
+            get {
+                object obj = ResourceManager.GetObject("585ea83dcb11b227491c3546", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _587e33a39686194a55adab81 {
+            get {
+                object obj = ResourceManager.GetObject("587e33a39686194a55adab81", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _589c825364b351149f22a826 {
+            get {
+                object obj = ResourceManager.GetObject("589c825364b351149f22a826", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

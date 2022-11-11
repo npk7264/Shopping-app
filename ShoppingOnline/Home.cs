@@ -123,32 +123,6 @@ namespace ShoppingOnline
             this._click(pb, e);
         }
 
-        private void btnThit_Click(object sender, EventArgs e)
-        {
-            flowLayoutPanel.Controls.Clear();
-            loadData("meat");
-        }
-        private void btnRau_Click(object sender, EventArgs e)
-        {
-            flowLayoutPanel.Controls.Clear();
-            loadData("vegetable");
-        }
-        private void btnMi_Click(object sender, EventArgs e)
-        {
-            flowLayoutPanel.Controls.Clear();
-            loadData("noodle");
-        }
-        private void btnBanh_Click(object sender, EventArgs e)
-        {
-            flowLayoutPanel.Controls.Clear();
-            loadData("cake");
-        }
-        private void btnNuoc_Click(object sender, EventArgs e)
-        {
-            flowLayoutPanel.Controls.Clear();
-            loadData("drink");
-        }
-
         private void pbSearchIcon_Click(object sender, EventArgs e)
         {
             string search_string = txtTimSP.Text;
@@ -400,6 +374,36 @@ namespace ShoppingOnline
                 txtTimSP.Text = "";
                 txtTimSP.ForeColor = Color.Black;
             }
+        }
+
+        private void btnThit_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel.Controls.Clear();
+            loadData("meat");
+        }
+
+        private void btnRau_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel.Controls.Clear();
+            loadData("vegetable");
+        }
+
+        private void btnMi_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel.Controls.Clear();
+            loadData("noodle");
+        }
+
+        private void btnBanh_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel.Controls.Clear();
+            loadData("cake");
+        }
+
+        private void btnNuoc_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel.Controls.Clear();
+            loadData("drink");
         }
     }
 }

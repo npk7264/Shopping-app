@@ -171,5 +171,23 @@
   <ItemGroup>
     <None Include="Resources\353439_basket_purse_shopping_cart_ecommerce_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\585ea83dcb11b227491c3546.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\580b57fbd9996e24bc43c0b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\580b57fbd9996e24bc43c0b2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\580b57fbd9996e24bc43c0cd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\589c825364b351149f22a826.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\587e33a39686194a55adab81.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

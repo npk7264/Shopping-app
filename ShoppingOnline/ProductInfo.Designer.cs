@@ -237,7 +237,7 @@
             // 
             // btnThemGioHang
             // 
-            this.btnThemGioHang.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnThemGioHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(183)))), ((int)(((byte)(42)))));
             this.btnThemGioHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThemGioHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemGioHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -294,7 +294,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.pbGioHang);
             this.panel1.Controls.Add(this.label8);
@@ -317,7 +317,7 @@
             // 
             // pbGioHang
             // 
-            this.pbGioHang.BackColor = System.Drawing.Color.SteelBlue;
+            this.pbGioHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
             this.pbGioHang.BackgroundImage = global::ShoppingOnline.Properties.Resources._353439_basket_purse_shopping_cart_ecommerce_icon;
             this.pbGioHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbGioHang.Cursor = System.Windows.Forms.Cursors.Hand;

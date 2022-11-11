@@ -38,7 +38,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pbGioHang);
             this.panel2.Controls.Add(this.label1);
@@ -61,7 +61,7 @@
             // 
             // pbGioHang
             // 
-            this.pbGioHang.BackColor = System.Drawing.Color.SteelBlue;
+            this.pbGioHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
             this.pbGioHang.BackgroundImage = global::ShoppingOnline.Properties.Resources._353439_basket_purse_shopping_cart_ecommerce_icon;
             this.pbGioHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbGioHang.Cursor = System.Windows.Forms.Cursors.Hand;
