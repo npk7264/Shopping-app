@@ -13,15 +13,22 @@ namespace ShoppingOnline
 {
     public partial class ProductInfo : Form
     {
+        public static int product_to_cart;
         public ProductInfo()
         {
             InitializeComponent();
+            string sl = Functions.GetFieldValues("select SoLuong from SANPHAM where TenFile = N'" + Home.filenameclick + "'");
+            if (sl == "0")
+                txtSL.Text = "Tạm hết hàng";
+            else
+                txtSL.Text = sl + " sản phẩm";
         }
 
         string price;
 
         private void ProductInfo_Load(object sender, EventArgs e)
         {
+            product_to_cart = 0;
             pbDetail.BackgroundImage = Home.pbClick.BackgroundImage;
             pbDetail.BackgroundImageLayout = ImageLayout.Zoom;
             lbTenSP.Text = Convert.ToString(Functions.GetFieldValues(
@@ -38,6 +45,12 @@ namespace ShoppingOnline
             if (txtSoLuong.Text == "")
             {
                 MessageBox.Show("Bạn phải chọn số lượng sản phẩm");
+                txtSoLuong.Text = "1";
+                return;
+            }
+            if (txtSL.Text == "Tạm hết hàng" || Convert.ToInt32(Functions.GetFieldValues("select SoLuong from SANPHAM where TenFile = N'" + Home.filenameclick + "'")) < Int32.Parse(txtSoLuong.Text))
+            {
+                MessageBox.Show("Không đủ số lượng sản phẩm");
                 txtSoLuong.Text = "1";
                 return;
             }
@@ -58,12 +71,22 @@ namespace ShoppingOnline
             else
                 sql = "update GIOHANG set SoLuong = SoLuong + " + txtSoLuong.Text + ", ThanhTien = ThanhTien + " + thanhtien + " where TenSP = N'" + lbTenSP.Text + "' and ID = " + id_donhang;
             Functions.RunSQL(sql);
+
+            //
+            Functions.RunSQL("update SANPHAM set SoLuong = SoLuong - " + txtSoLuong.Text + " where TenFile = N'" + Home.filenameclick + "'");
+            string sl = Functions.GetFieldValues("select SoLuong from SANPHAM where TenFile = N'" + Home.filenameclick + "'");
+            if(sl == "0")
+                txtSL.Text = "Tạm hết hàng";
+            else
+                txtSL.Text = sl + " sản phẩm";
         }
 
         private void pbGioHang_Click(object sender, EventArgs e)
         {
+            product_to_cart = 1;//
             Cart frm = new Cart();
             frm.ShowDialog();
+            this.Close();//
         }
 
         private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
@@ -80,7 +103,11 @@ namespace ShoppingOnline
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            txtSoLuong.Text = (Int32.Parse(txtSoLuong.Text) + 1).ToString();
+            int count = Convert.ToInt32(Functions.GetFieldValues("select SoLuong from SANPHAM where TenFile = N'" + Home.filenameclick + "'"));
+            if (Int32.Parse(txtSoLuong.Text) == count || txtSL.Text == "Tạm hết hàng")
+                MessageBox.Show("Bạn đã chọn tối đa số lượng sản phẩm này");
+            else
+                txtSoLuong.Text = (Int32.Parse(txtSoLuong.Text) + 1).ToString();
         }
 
         private void btnSub_Click(object sender, EventArgs e)

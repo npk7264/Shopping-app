@@ -34,7 +34,9 @@
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.pbGioHang = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pbSearchIcon = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,11 +46,10 @@
             this.btnNuoc = new System.Windows.Forms.Button();
             this.btnBanh = new System.Windows.Forms.Button();
             this.btnMi = new System.Windows.Forms.Button();
-            this.pbGioHang = new System.Windows.Forms.PictureBox();
-            this.pbSearchIcon = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbGioHang)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearchIcon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +82,7 @@
             // 
             // btnSPDaXem
             // 
-            this.btnSPDaXem.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSPDaXem.BackColor = System.Drawing.Color.White;
             this.btnSPDaXem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSPDaXem.FlatAppearance.BorderSize = 0;
             this.btnSPDaXem.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -90,9 +91,9 @@
             this.btnSPDaXem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSPDaXem.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSPDaXem.ForeColor = System.Drawing.Color.Black;
-            this.btnSPDaXem.Location = new System.Drawing.Point(0, 591);
+            this.btnSPDaXem.Location = new System.Drawing.Point(0, 603);
             this.btnSPDaXem.Name = "btnSPDaXem";
-            this.btnSPDaXem.Size = new System.Drawing.Size(375, 65);
+            this.btnSPDaXem.Size = new System.Drawing.Size(381, 65);
             this.btnSPDaXem.TabIndex = 7;
             this.btnSPDaXem.TabStop = false;
             this.btnSPDaXem.Text = "Sản phẩm đã xem";
@@ -104,7 +105,7 @@
             this.flowLayoutPanel.AutoScroll = true;
             this.flowLayoutPanel.Location = new System.Drawing.Point(407, 165);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(933, 551);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(933, 563);
             this.flowLayoutPanel.TabIndex = 11;
             // 
             // panel2
@@ -132,6 +133,19 @@
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+            // pbGioHang
+            // 
+            this.pbGioHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
+            this.pbGioHang.BackgroundImage = global::ShoppingOnline.Properties.Resources._353439_basket_purse_shopping_cart_ecommerce_icon;
+            this.pbGioHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbGioHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbGioHang.Location = new System.Drawing.Point(1164, 20);
+            this.pbGioHang.Name = "pbGioHang";
+            this.pbGioHang.Size = new System.Drawing.Size(73, 43);
+            this.pbGioHang.TabIndex = 15;
+            this.pbGioHang.TabStop = false;
+            this.pbGioHang.Click += new System.EventHandler(this.pbGioHang_Click);
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Window;
@@ -142,6 +156,19 @@
             this.panel3.Size = new System.Drawing.Size(559, 50);
             this.panel3.TabIndex = 14;
             // 
+            // pbSearchIcon
+            // 
+            this.pbSearchIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
+            this.pbSearchIcon.BackgroundImage = global::ShoppingOnline.Properties.Resources._211817_search_strong_icon;
+            this.pbSearchIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbSearchIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbSearchIcon.Location = new System.Drawing.Point(481, 4);
+            this.pbSearchIcon.Name = "pbSearchIcon";
+            this.pbSearchIcon.Size = new System.Drawing.Size(73, 43);
+            this.pbSearchIcon.TabIndex = 12;
+            this.pbSearchIcon.TabStop = false;
+            this.pbSearchIcon.Click += new System.EventHandler(this.pbSearchIcon_Click);
+            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
@@ -149,7 +176,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 110);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(375, 55);
+            this.label1.Size = new System.Drawing.Size(381, 55);
             this.label1.TabIndex = 20;
             this.label1.Text = "MENU";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -159,16 +186,16 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 535);
+            this.label2.Location = new System.Drawing.Point(0, 547);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(375, 55);
+            this.label2.Size = new System.Drawing.Size(381, 55);
             this.label2.TabIndex = 21;
             this.label2.Text = "KHÁC";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -177,9 +204,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(0, 661);
+            this.button1.Location = new System.Drawing.Point(0, 663);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(375, 65);
+            this.button1.Size = new System.Drawing.Size(381, 65);
             this.button1.TabIndex = 22;
             this.button1.TabStop = false;
             this.button1.Text = "Thoát";
@@ -199,7 +226,7 @@
             // 
             // btnThit
             // 
-            this.btnThit.BackColor = System.Drawing.SystemColors.Control;
+            this.btnThit.BackColor = System.Drawing.Color.White;
             this.btnThit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThit.FlatAppearance.BorderSize = 0;
             this.btnThit.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -212,7 +239,7 @@
             this.btnThit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThit.Location = new System.Drawing.Point(0, 165);
             this.btnThit.Name = "btnThit";
-            this.btnThit.Size = new System.Drawing.Size(375, 65);
+            this.btnThit.Size = new System.Drawing.Size(381, 65);
             this.btnThit.TabIndex = 15;
             this.btnThit.TabStop = false;
             this.btnThit.Text = "Thịt, cá, trứng, hải sản";
@@ -223,7 +250,7 @@
             // 
             // btnRau
             // 
-            this.btnRau.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRau.BackColor = System.Drawing.Color.White;
             this.btnRau.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRau.FlatAppearance.BorderSize = 0;
             this.btnRau.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -236,7 +263,7 @@
             this.btnRau.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRau.Location = new System.Drawing.Point(0, 230);
             this.btnRau.Name = "btnRau";
-            this.btnRau.Size = new System.Drawing.Size(375, 65);
+            this.btnRau.Size = new System.Drawing.Size(381, 65);
             this.btnRau.TabIndex = 16;
             this.btnRau.TabStop = false;
             this.btnRau.Text = "Rau, củ, trái cây";
@@ -247,7 +274,7 @@
             // 
             // btnNuoc
             // 
-            this.btnNuoc.BackColor = System.Drawing.SystemColors.Control;
+            this.btnNuoc.BackColor = System.Drawing.Color.White;
             this.btnNuoc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuoc.FlatAppearance.BorderSize = 0;
             this.btnNuoc.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -260,10 +287,10 @@
             this.btnNuoc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuoc.Location = new System.Drawing.Point(0, 425);
             this.btnNuoc.Name = "btnNuoc";
-            this.btnNuoc.Size = new System.Drawing.Size(375, 65);
+            this.btnNuoc.Size = new System.Drawing.Size(381, 65);
             this.btnNuoc.TabIndex = 18;
             this.btnNuoc.TabStop = false;
-            this.btnNuoc.Text = "Thức uống";
+            this.btnNuoc.Text = "Nước ngọt, nước trái cây";
             this.btnNuoc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuoc.UseVisualStyleBackColor = false;
@@ -271,7 +298,7 @@
             // 
             // btnBanh
             // 
-            this.btnBanh.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBanh.BackColor = System.Drawing.Color.White;
             this.btnBanh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBanh.FlatAppearance.BorderSize = 0;
             this.btnBanh.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -284,7 +311,7 @@
             this.btnBanh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBanh.Location = new System.Drawing.Point(0, 360);
             this.btnBanh.Name = "btnBanh";
-            this.btnBanh.Size = new System.Drawing.Size(375, 65);
+            this.btnBanh.Size = new System.Drawing.Size(381, 65);
             this.btnBanh.TabIndex = 19;
             this.btnBanh.TabStop = false;
             this.btnBanh.Text = "Bánh, kẹo";
@@ -295,7 +322,7 @@
             // 
             // btnMi
             // 
-            this.btnMi.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMi.BackColor = System.Drawing.Color.White;
             this.btnMi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMi.FlatAppearance.BorderSize = 0;
             this.btnMi.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
@@ -308,7 +335,7 @@
             this.btnMi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMi.Location = new System.Drawing.Point(0, 295);
             this.btnMi.Name = "btnMi";
-            this.btnMi.Size = new System.Drawing.Size(375, 65);
+            this.btnMi.Size = new System.Drawing.Size(381, 65);
             this.btnMi.TabIndex = 17;
             this.btnMi.TabStop = false;
             this.btnMi.Text = "Mì, miến, cháo, phở";
@@ -317,38 +344,21 @@
             this.btnMi.UseVisualStyleBackColor = false;
             this.btnMi.Click += new System.EventHandler(this.btnMi_Click);
             // 
-            // pbGioHang
+            // panel1
             // 
-            this.pbGioHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
-            this.pbGioHang.BackgroundImage = global::ShoppingOnline.Properties.Resources._353439_basket_purse_shopping_cart_ecommerce_icon;
-            this.pbGioHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbGioHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbGioHang.Location = new System.Drawing.Point(1164, 20);
-            this.pbGioHang.Name = "pbGioHang";
-            this.pbGioHang.Size = new System.Drawing.Size(73, 43);
-            this.pbGioHang.TabIndex = 15;
-            this.pbGioHang.TabStop = false;
-            this.pbGioHang.Click += new System.EventHandler(this.pbGioHang_Click);
-            // 
-            // pbSearchIcon
-            // 
-            this.pbSearchIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
-            this.pbSearchIcon.BackgroundImage = global::ShoppingOnline.Properties.Resources._211817_search_strong_icon;
-            this.pbSearchIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbSearchIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbSearchIcon.Location = new System.Drawing.Point(481, 4);
-            this.pbSearchIcon.Name = "pbSearchIcon";
-            this.pbSearchIcon.Size = new System.Drawing.Size(73, 43);
-            this.pbSearchIcon.TabIndex = 12;
-            this.pbSearchIcon.TabStop = false;
-            this.pbSearchIcon.Click += new System.EventHandler(this.pbSearchIcon_Click);
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(0, 490);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(381, 57);
+            this.panel1.TabIndex = 24;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1340, 740);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
@@ -367,9 +377,9 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Home_Load);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbGioHang)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGioHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearchIcon)).EndInit();
             this.ResumeLayout(false);
 
@@ -394,6 +404,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

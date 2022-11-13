@@ -13,6 +13,7 @@ namespace ShoppingOnline
     public partial class Cart : Form
     {
         public static Panel pCart = new Panel();
+        
         public Cart()
         {
             InitializeComponent();
@@ -127,6 +128,7 @@ namespace ShoppingOnline
             Label temp = (Label)sender;
             Control x = temp.Parent;
             Control name_lb = x.Controls[1];
+            Control quantity_lb = x.Controls[3]; //
             x.Controls.Remove(name_lb);
             flowLayoutPanelCart.Controls.Remove(x);
 
@@ -134,6 +136,9 @@ namespace ShoppingOnline
             Functions.RunSQL("delete from GIOHANG where TenSP = N'" + name_lb.Text + "' and ID = " + id);
             lbTongTien.Text = Functions.GetFieldValues("select SUM(ThanhTien) from GIOHANG where ID = " + id);
             pCart = pnCart;
+
+            Functions.RunSQL("update SANPHAM set SoLuong = SoLuong + " + quantity_lb.Text + " where TenSP = N'" + name_lb.Text + "'");//
+            
             if (flowLayoutPanelCart.Controls.Count == 0)
             {
                 pnCart.Controls.Clear();
@@ -161,6 +166,11 @@ namespace ShoppingOnline
         private void pbBack_Click(object sender, EventArgs e)
         {
             this.Close();
+            if (ProductInfo.product_to_cart == 1)
+            {
+                ProductInfo frm = new ProductInfo();
+                frm.ShowDialog();
+            }
         }
     }
 }

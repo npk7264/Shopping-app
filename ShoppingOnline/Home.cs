@@ -85,7 +85,7 @@ namespace ShoppingOnline
                 p.Controls.Add(name_lb);
                 p.Controls.Add(price_lb);
                 p.BackColor = Color.White;
-                p.BorderStyle = BorderStyle.FixedSingle;
+                //p.BorderStyle = BorderStyle.FixedSingle;
                 p.MouseClick += new MouseEventHandler(this._pnClick);
                 p.Cursor = Cursors.Hand;
                 flowLayoutPanel.Controls.Add(p);
@@ -193,7 +193,7 @@ namespace ShoppingOnline
                         p.Controls.Add(pn);
                         p.Controls.Add(name_lb);
                         p.Controls.Add(price_lb);
-                        p.BorderStyle = BorderStyle.FixedSingle;
+                        //p.BorderStyle = BorderStyle.FixedSingle;
                         p.BackColor = Color.White;
                         p.MouseClick += new MouseEventHandler(this._pnClick);
                         flowLayoutPanel.Controls.Add(p);
@@ -273,7 +273,7 @@ namespace ShoppingOnline
                             p.Controls.Add(pn);
                             p.Controls.Add(name_lb);
                             p.Controls.Add(price_lb);
-                            p.BorderStyle = BorderStyle.FixedSingle;
+                            //p.BorderStyle = BorderStyle.FixedSingle;
                             p.BackColor = Color.White;
                             p.MouseClick += new MouseEventHandler(this._pnClick);
                             flowLayoutPanel.Controls.Add(p);
@@ -340,7 +340,7 @@ namespace ShoppingOnline
                 p.Controls.Add(name_lb);
                 p.Controls.Add(price_lb);
                 p.BackColor = Color.White;
-                p.BorderStyle = BorderStyle.FixedSingle;
+                //p.BorderStyle = BorderStyle.FixedSingle;
                 p.MouseClick += new MouseEventHandler(this._pnClick);
                 p.Cursor = Cursors.Hand;
                 flowLayoutPanel.Controls.Add(p);
