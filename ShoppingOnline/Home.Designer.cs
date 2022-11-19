@@ -34,23 +34,29 @@
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbGioHang = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pbSearchIcon = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnThit = new System.Windows.Forms.Button();
             this.btnRau = new System.Windows.Forms.Button();
             this.btnNuoc = new System.Windows.Forms.Button();
             this.btnBanh = new System.Windows.Forms.Button();
             this.btnMi = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.cbSort = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGioHang)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearchIcon)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtTimSP
@@ -112,6 +118,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
             this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.pbGioHang);
             this.panel2.Controls.Add(this.lbOrder);
             this.panel2.Controls.Add(this.panel3);
@@ -123,15 +130,27 @@
             // label4
             // 
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(32, 0);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(179, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(305, 83);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Grocery";
+            this.label4.Size = new System.Drawing.Size(117, 83);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Food Store";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::ShoppingOnline.Properties.Resources.logo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Location = new System.Drawing.Point(64, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(162, 82);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pbGioHang
             // 
@@ -211,18 +230,15 @@
             this.button1.TabStop = false;
             this.button1.Text = "Thoát";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label3
+            // panel1
             // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(411, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(929, 55);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "SẢN PHẨM";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(0, 490);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(381, 57);
+            this.panel1.TabIndex = 24;
             // 
             // btnThit
             // 
@@ -344,13 +360,55 @@
             this.btnMi.UseVisualStyleBackColor = false;
             this.btnMi.Click += new System.EventHandler(this.btnMi_Click);
             // 
-            // panel1
+            // panel4
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 490);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(381, 57);
-            this.panel1.TabIndex = 24;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
+            this.panel4.Controls.Add(this.cbSort);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Location = new System.Drawing.Point(411, 110);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(929, 55);
+            this.panel4.TabIndex = 26;
+            // 
+            // cbSort
+            // 
+            this.cbSort.BackColor = System.Drawing.Color.White;
+            this.cbSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSort.FormattingEnabled = true;
+            this.cbSort.ItemHeight = 25;
+            this.cbSort.Items.AddRange(new object[] {
+            "Giá từ thấp tới cao",
+            "Giá từ cao tới thấp"});
+            this.cbSort.Location = new System.Drawing.Point(593, 11);
+            this.cbSort.Name = "cbSort";
+            this.cbSort.Size = new System.Drawing.Size(233, 33);
+            this.cbSort.TabIndex = 1;
+            this.cbSort.TabStop = false;
+            this.cbSort.SelectedIndexChanged += new System.EventHandler(this.cbSort_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(405, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(166, 29);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Sắp xếp theo";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(82, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(168, 32);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "SẢN PHẨM";
             // 
             // Home
             // 
@@ -358,8 +416,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1340, 740);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -377,10 +435,13 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Home_Load);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGioHang)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearchIcon)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -394,7 +455,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pbGioHang;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnThit;
         private System.Windows.Forms.Button btnRau;
         private System.Windows.Forms.Button btnNuoc;
@@ -403,8 +463,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ComboBox cbSort;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
     }
 }
 

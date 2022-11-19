@@ -172,5 +172,22 @@ namespace ShoppingOnline
                 frm.ShowDialog();
             }
         }
+
+        private void pbHome_Click(object sender, EventArgs e)
+        {
+            List<Form> openForms = new List<Form>();
+
+            foreach (Form f in Application.OpenForms)
+                openForms.Add(f);
+            foreach (Form f in openForms)
+                if (f.Name != "Home")
+                    f.Close();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            Order frm = new Order();
+            frm.ShowDialog();
+        }
     }
 }

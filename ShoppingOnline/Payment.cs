@@ -105,12 +105,27 @@ namespace ShoppingOnline
             notice.BringToFront();
             notice.Size = Cart.pCart.Size;
             notice.TextAlign = ContentAlignment.MiddleCenter;
+
             this.Close();
+
+            Report frm = new Report();
+            frm.ShowDialog();
         }
 
         private void pbBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pbHome_Click(object sender, EventArgs e)
+        {
+            List<Form> openForms = new List<Form>();
+
+            foreach (Form f in Application.OpenForms)
+                openForms.Add(f);
+            foreach (Form f in openForms)
+                if (f.Name != "Home")
+                    f.Close();
         }
     }
 }

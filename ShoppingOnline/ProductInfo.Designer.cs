@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtSL = new System.Windows.Forms.Label();
             this.btnSub = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -48,12 +49,12 @@
             this.lbGiaSP = new System.Windows.Forms.Label();
             this.lbTenSP = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.pbBack = new System.Windows.Forms.PictureBox();
             this.pbHome = new System.Windows.Forms.PictureBox();
             this.pbGioHang = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pbDetail = new System.Windows.Forms.PictureBox();
-            this.txtSL = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnThongTinSP.SuspendLayout();
@@ -80,6 +81,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(741, 627);
             this.panel2.TabIndex = 1;
+            // 
+            // txtSL
+            // 
+            this.txtSL.AutoSize = true;
+            this.txtSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSL.Location = new System.Drawing.Point(350, 505);
+            this.txtSL.Name = "txtSL";
+            this.txtSL.Size = new System.Drawing.Size(64, 25);
+            this.txtSL.TabIndex = 14;
+            this.txtSL.Text = "label7";
+            this.txtSL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnSub
             // 
@@ -158,11 +170,10 @@
             // 
             // lbHanSD
             // 
-            this.lbHanSD.AutoSize = true;
             this.lbHanSD.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHanSD.Location = new System.Drawing.Point(230, 122);
             this.lbHanSD.Name = "lbHanSD";
-            this.lbHanSD.Size = new System.Drawing.Size(91, 29);
+            this.lbHanSD.Size = new System.Drawing.Size(432, 92);
             this.lbHanSD.TabIndex = 17;
             this.lbHanSD.Text = "2 tháng";
             // 
@@ -290,6 +301,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.pbBack);
             this.panel1.Controls.Add(this.pbHome);
             this.panel1.Controls.Add(this.pbGioHang);
@@ -298,6 +310,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1340, 83);
             this.panel1.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(503, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(322, 38);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Thông tin sản phẩm";
             // 
             // pbBack
             // 
@@ -331,7 +354,7 @@
             this.pbGioHang.BackgroundImage = global::ShoppingOnline.Properties.Resources._353439_basket_purse_shopping_cart_ecommerce_icon;
             this.pbGioHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbGioHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbGioHang.Location = new System.Drawing.Point(1140, 20);
+            this.pbGioHang.Location = new System.Drawing.Point(1164, 20);
             this.pbGioHang.Name = "pbGioHang";
             this.pbGioHang.Size = new System.Drawing.Size(73, 43);
             this.pbGioHang.TabIndex = 15;
@@ -343,7 +366,7 @@
             this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(988, 20);
+            this.label8.Location = new System.Drawing.Point(1012, 20);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 43);
             this.label8.TabIndex = 6;
@@ -360,17 +383,6 @@
             this.pbDetail.Size = new System.Drawing.Size(531, 603);
             this.pbDetail.TabIndex = 0;
             this.pbDetail.TabStop = false;
-            // 
-            // txtSL
-            // 
-            this.txtSL.AutoSize = true;
-            this.txtSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSL.Location = new System.Drawing.Point(350, 505);
-            this.txtSL.Name = "txtSL";
-            this.txtSL.Size = new System.Drawing.Size(64, 25);
-            this.txtSL.TabIndex = 14;
-            this.txtSL.Text = "label7";
-            this.txtSL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ProductInfo
             // 
@@ -392,6 +404,7 @@
             this.pnThongTinSP.ResumeLayout(false);
             this.pnThongTinSP.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGioHang)).EndInit();
@@ -427,5 +440,6 @@
         private System.Windows.Forms.PictureBox pbHome;
         private System.Windows.Forms.PictureBox pbBack;
         private System.Windows.Forms.Label txtSL;
+        private System.Windows.Forms.Label label7;
     }
 }

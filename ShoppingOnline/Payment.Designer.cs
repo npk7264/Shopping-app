@@ -34,6 +34,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pbBack = new System.Windows.Forms.PictureBox();
+            this.pbHome = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbTien = new System.Windows.Forms.Label();
             this.btnThanhToan = new System.Windows.Forms.Button();
@@ -49,16 +52,14 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.pbBack = new System.Windows.Forms.PictureBox();
-            this.pbHome = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -115,12 +116,50 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.pbBack);
             this.panel2.Controls.Add(this.pbHome);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1340, 83);
             this.panel2.TabIndex = 14;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(589, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(157, 38);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Đặt hàng";
+            // 
+            // pbBack
+            // 
+            this.pbBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
+            this.pbBack.BackgroundImage = global::ShoppingOnline.Properties.Resources._1564492_navigation_back_arrow_left_icon;
+            this.pbBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbBack.Location = new System.Drawing.Point(78, 20);
+            this.pbBack.Name = "pbBack";
+            this.pbBack.Size = new System.Drawing.Size(73, 43);
+            this.pbBack.TabIndex = 19;
+            this.pbBack.TabStop = false;
+            this.pbBack.Click += new System.EventHandler(this.pbBack_Click);
+            // 
+            // pbHome
+            // 
+            this.pbHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
+            this.pbHome.BackgroundImage = global::ShoppingOnline.Properties.Resources._216242_home_icon;
+            this.pbHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbHome.Location = new System.Drawing.Point(208, 20);
+            this.pbHome.Name = "pbHome";
+            this.pbHome.Size = new System.Drawing.Size(73, 43);
+            this.pbHome.TabIndex = 18;
+            this.pbHome.TabStop = false;
+            this.pbHome.Click += new System.EventHandler(this.pbHome_Click);
             // 
             // panel4
             // 
@@ -157,7 +196,7 @@
             this.btnThanhToan.Size = new System.Drawing.Size(189, 61);
             this.btnThanhToan.TabIndex = 14;
             this.btnThanhToan.TabStop = false;
-            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.Text = "Đặt hàng";
             this.btnThanhToan.UseVisualStyleBackColor = false;
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click_1);
             // 
@@ -189,6 +228,7 @@
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(363, 23);
             this.txtSoDienThoai.TabIndex = 22;
+            this.txtSoDienThoai.TabStop = false;
             // 
             // label2
             // 
@@ -208,6 +248,7 @@
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(449, 23);
             this.txtTen.TabIndex = 18;
+            this.txtTen.TabStop = false;
             // 
             // label1
             // 
@@ -276,31 +317,7 @@
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(1091, 23);
             this.txtDiaChi.TabIndex = 18;
-            // 
-            // pbBack
-            // 
-            this.pbBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
-            this.pbBack.BackgroundImage = global::ShoppingOnline.Properties.Resources._1564492_navigation_back_arrow_left_icon;
-            this.pbBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbBack.Location = new System.Drawing.Point(78, 20);
-            this.pbBack.Name = "pbBack";
-            this.pbBack.Size = new System.Drawing.Size(73, 43);
-            this.pbBack.TabIndex = 19;
-            this.pbBack.TabStop = false;
-            this.pbBack.Click += new System.EventHandler(this.pbBack_Click);
-            // 
-            // pbHome
-            // 
-            this.pbHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
-            this.pbHome.BackgroundImage = global::ShoppingOnline.Properties.Resources._216242_home_icon;
-            this.pbHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbHome.Location = new System.Drawing.Point(208, 20);
-            this.pbHome.Name = "pbHome";
-            this.pbHome.Size = new System.Drawing.Size(73, 43);
-            this.pbHome.TabIndex = 18;
-            this.pbHome.TabStop = false;
+            this.txtDiaChi.TabStop = false;
             // 
             // Payment
             // 
@@ -325,6 +342,9 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -333,8 +353,6 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -363,5 +381,6 @@
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.PictureBox pbBack;
         private System.Windows.Forms.PictureBox pbHome;
+        private System.Windows.Forms.Label label3;
     }
 }

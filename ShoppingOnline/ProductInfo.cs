@@ -38,6 +38,9 @@ namespace ShoppingOnline
             price = lbGiaSP.Text.Substring(0, lbGiaSP.Text.Length - 5);
             lbXuatXu.Text = Convert.ToString(Functions.GetFieldValues(
                 "select XuatXu from SANPHAM where TenFile = N'" + Home.filenameclick + "'"));
+            lbThuongHieu.Text = Functions.GetFieldValues("select ThuongHieu from SANPHAM where TenFile = N'" + Home.filenameclick + "'");
+            lbNgaySX.Text = Functions.GetFieldValues("select NgaySX from SANPHAM where TenFile = N'" + Home.filenameclick + "'");
+            lbHanSD.Text = Functions.GetFieldValues("select HanSD from SANPHAM where TenFile = N'" + Home.filenameclick + "'");
         }
 
         private void btnThemGioHang_Click(object sender, EventArgs e)
@@ -123,7 +126,13 @@ namespace ShoppingOnline
 
         private void pbHome_Click(object sender, EventArgs e)
         {
+            List<Form> openForms = new List<Form>();
 
+            foreach (Form f in Application.OpenForms)
+                openForms.Add(f);
+            foreach (Form f in openForms)
+                if (f.Name != "Home")
+                    f.Close();
         }
     }
 }

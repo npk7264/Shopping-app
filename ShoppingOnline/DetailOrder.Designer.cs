@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pbBack = new System.Windows.Forms.PictureBox();
+            this.pbHome = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.flowLayoutPanelCart = new System.Windows.Forms.FlowLayoutPanel();
             this.pnTien = new System.Windows.Forms.Panel();
@@ -39,18 +42,17 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.pbBack = new System.Windows.Forms.PictureBox();
-            this.pbHome = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.pnTien.SuspendLayout();
-            this.pnIndex.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHome)).BeginInit();
+            this.pnTien.SuspendLayout();
+            this.pnIndex.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.pbBack);
             this.panel1.Controls.Add(this.pbHome);
             this.panel1.Controls.Add(this.label8);
@@ -59,11 +61,49 @@
             this.panel1.Size = new System.Drawing.Size(1340, 83);
             this.panel1.TabIndex = 15;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(525, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(279, 38);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Chi tiết đơn hàng";
+            // 
+            // pbBack
+            // 
+            this.pbBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
+            this.pbBack.BackgroundImage = global::ShoppingOnline.Properties.Resources._1564492_navigation_back_arrow_left_icon;
+            this.pbBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbBack.Location = new System.Drawing.Point(78, 20);
+            this.pbBack.Name = "pbBack";
+            this.pbBack.Size = new System.Drawing.Size(73, 43);
+            this.pbBack.TabIndex = 19;
+            this.pbBack.TabStop = false;
+            this.pbBack.Click += new System.EventHandler(this.pbBack_Click);
+            // 
+            // pbHome
+            // 
+            this.pbHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
+            this.pbHome.BackgroundImage = global::ShoppingOnline.Properties.Resources._216242_home_icon;
+            this.pbHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbHome.Location = new System.Drawing.Point(208, 20);
+            this.pbHome.Name = "pbHome";
+            this.pbHome.Size = new System.Drawing.Size(73, 43);
+            this.pbHome.TabIndex = 18;
+            this.pbHome.TabStop = false;
+            this.pbHome.Click += new System.EventHandler(this.pbHome_Click);
+            // 
             // label8
             // 
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(988, 20);
+            this.label8.Location = new System.Drawing.Point(1012, 20);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 43);
             this.label8.TabIndex = 6;
@@ -162,31 +202,6 @@
             this.label15.TabIndex = 0;
             this.label15.Text = "Sản phẩm";
             // 
-            // pbBack
-            // 
-            this.pbBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
-            this.pbBack.BackgroundImage = global::ShoppingOnline.Properties.Resources._1564492_navigation_back_arrow_left_icon;
-            this.pbBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbBack.Location = new System.Drawing.Point(78, 20);
-            this.pbBack.Name = "pbBack";
-            this.pbBack.Size = new System.Drawing.Size(73, 43);
-            this.pbBack.TabIndex = 19;
-            this.pbBack.TabStop = false;
-            this.pbBack.Click += new System.EventHandler(this.pbBack_Click);
-            // 
-            // pbHome
-            // 
-            this.pbHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
-            this.pbHome.BackgroundImage = global::ShoppingOnline.Properties.Resources._216242_home_icon;
-            this.pbHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbHome.Location = new System.Drawing.Point(208, 20);
-            this.pbHome.Name = "pbHome";
-            this.pbHome.Size = new System.Drawing.Size(73, 43);
-            this.pbHome.TabIndex = 18;
-            this.pbHome.TabStop = false;
-            // 
             // DetailOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -202,12 +217,13 @@
             this.Text = "DetailOrder";
             this.Load += new System.EventHandler(this.DetailOrder_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).EndInit();
             this.pnTien.ResumeLayout(false);
             this.pnTien.PerformLayout();
             this.pnIndex.ResumeLayout(false);
             this.pnIndex.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbHome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -227,5 +243,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pbBack;
         private System.Windows.Forms.PictureBox pbHome;
+        private System.Windows.Forms.Label label3;
     }
 }

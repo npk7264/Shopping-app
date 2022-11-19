@@ -40,16 +40,17 @@
             this.lbTongTien = new System.Windows.Forms.Label();
             this.pnTien = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pnCart = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.pbBack = new System.Windows.Forms.PictureBox();
             this.pbHome = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pnCart = new System.Windows.Forms.Panel();
             this.pnIndex.SuspendLayout();
             this.pnTien.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.pnCart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHome)).BeginInit();
+            this.pnCart.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanelCart
@@ -73,7 +74,7 @@
             this.btnThanhToan.Size = new System.Drawing.Size(195, 61);
             this.btnThanhToan.TabIndex = 1;
             this.btnThanhToan.TabStop = false;
-            this.btnThanhToan.Text = "Đặt hàng";
+            this.btnThanhToan.Text = "Mua hàng";
             this.btnThanhToan.UseVisualStyleBackColor = false;
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
@@ -177,6 +178,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(125)))), ((int)(((byte)(252)))));
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.pbBack);
             this.panel1.Controls.Add(this.pbHome);
             this.panel1.Controls.Add(this.label8);
@@ -185,26 +187,16 @@
             this.panel1.Size = new System.Drawing.Size(1340, 83);
             this.panel1.TabIndex = 14;
             // 
-            // label8
+            // label7
             // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(988, 20);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(125, 43);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Đơn hàng";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnCart
-            // 
-            this.pnCart.Controls.Add(this.pnIndex);
-            this.pnCart.Controls.Add(this.pnTien);
-            this.pnCart.Controls.Add(this.flowLayoutPanelCart);
-            this.pnCart.Location = new System.Drawing.Point(3, 101);
-            this.pnCart.Name = "pnCart";
-            this.pnCart.Size = new System.Drawing.Size(1332, 635);
-            this.pnCart.TabIndex = 15;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(589, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(157, 38);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Giỏ hàng";
             // 
             // pbBack
             // 
@@ -230,6 +222,30 @@
             this.pbHome.Size = new System.Drawing.Size(73, 43);
             this.pbHome.TabIndex = 18;
             this.pbHome.TabStop = false;
+            this.pbHome.Click += new System.EventHandler(this.pbHome_Click);
+            // 
+            // label8
+            // 
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.Window;
+            this.label8.Location = new System.Drawing.Point(1012, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(125, 43);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Đơn hàng";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // pnCart
+            // 
+            this.pnCart.Controls.Add(this.pnIndex);
+            this.pnCart.Controls.Add(this.pnTien);
+            this.pnCart.Controls.Add(this.flowLayoutPanelCart);
+            this.pnCart.Location = new System.Drawing.Point(3, 101);
+            this.pnCart.Name = "pnCart";
+            this.pnCart.Size = new System.Drawing.Size(1332, 635);
+            this.pnCart.TabIndex = 15;
             // 
             // Cart
             // 
@@ -248,9 +264,10 @@
             this.pnTien.ResumeLayout(false);
             this.pnTien.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.pnCart.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHome)).EndInit();
+            this.pnCart.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -273,5 +290,6 @@
         private System.Windows.Forms.Panel pnCart;
         private System.Windows.Forms.PictureBox pbBack;
         private System.Windows.Forms.PictureBox pbHome;
+        private System.Windows.Forms.Label label7;
     }
 }

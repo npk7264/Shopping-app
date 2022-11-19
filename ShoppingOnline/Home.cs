@@ -25,7 +25,6 @@ namespace ShoppingOnline
             txtTimSP.ForeColor = Color.Gray;
             foreach (string topic in topic_list)
                 loadData(topic);
-            //Functions.RunSQL("delete from SANPHAMDAXEM");
         }
 
         string[] topic_list = { "meat", "vegetable", "noodle", "cake", "drink" };
@@ -37,6 +36,7 @@ namespace ShoppingOnline
 
         void loadData(string topic)
         {
+            cbSort.Text = null;
             string[] files = Directory.GetFiles(topic);
             foreach (string file in files)
             {
@@ -125,6 +125,7 @@ namespace ShoppingOnline
 
         private void pbSearchIcon_Click(object sender, EventArgs e)
         {
+            cbSort.Text = null;
             string search_string = txtTimSP.Text;
             string[] search_word_list = search_string.Split(' ');
 
@@ -205,6 +206,7 @@ namespace ShoppingOnline
         {
             if (e.KeyCode == Keys.Enter)
             {
+                cbSort.Text = null;
                 string search_string = txtTimSP.Text;
                 string[] search_word_list = search_string.Split(' ');
 
@@ -280,6 +282,16 @@ namespace ShoppingOnline
                         }
                     }
                 }
+                if(flowLayoutPanel.Controls.Count == 0)
+                {
+                    Label temp = new Label();
+                    temp.Text = "Không tìm thấy sản phẩm phù hợp";
+                    temp.AutoSize = false;
+                    temp.Size = new Size(flowLayoutPanel.Width - 50, flowLayoutPanel.Height);
+                    temp.TextAlign = ContentAlignment.MiddleCenter;
+                    temp.Font = new Font("Arial", 20, FontStyle.Regular);
+                    flowLayoutPanel.Controls.Add(temp);
+                }
             }
         }
 
@@ -291,6 +303,7 @@ namespace ShoppingOnline
 
         private void btnSPDaXem_Click(object sender, EventArgs e)
         {
+            cbSort.Text = null;
             flowLayoutPanel.Controls.Clear();
             List<string> files = Functions.GetFieldValuesList("select FolderFile from SANPHAMDAXEM");
             foreach (string file in files)
@@ -347,11 +360,6 @@ namespace ShoppingOnline
             }
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void lbOrder_Click(object sender, EventArgs e)
         {
             Order frm = new Order();
@@ -404,6 +412,185 @@ namespace ShoppingOnline
         {
             flowLayoutPanel.Controls.Clear();
             loadData("drink");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel.Controls.Clear();
+            foreach (string topic in topic_list)
+                loadData(topic);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel.Controls.Clear();
+            foreach (string topic in topic_list)
+                loadData(topic);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void cbSort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbSort.Text == "Giá từ thấp tới cao")
+            {
+                DataTable product_dt = new DataTable();
+                product_dt.Columns.Add("product", typeof(string));
+                product_dt.Columns.Add("price", typeof(int));
+
+                List<string> product_name = new List<string>();
+                foreach (Control control in flowLayoutPanel.Controls)
+                {
+                    string n = (string)control.Controls[0].Controls[0].Tag;
+                    string price_text = (string)control.Controls[2].Text;
+                    int p = Int32.Parse(price_text.Substring(0, price_text.Length - 5));
+                    product_dt.Rows.Add(n, p);
+                }
+                product_dt.DefaultView.Sort = "price";
+                product_dt = product_dt.DefaultView.ToTable();
+
+                List<string> files = new List<string>();
+                foreach (DataRow row in product_dt.Rows)
+                {
+                    files.Add((string)row["product"]);
+                    //MessageBox.Show(files[files.Count - 1]);
+                }
+
+                flowLayoutPanel.Controls.Clear();
+                foreach (string file in files)
+                {
+                    int index = file.IndexOf("\\") + 1;
+                    string path = file.Substring(index, file.Length - index - 4);
+
+                    Panel p = new Panel();
+                    p.Size = new Size(220, 250);
+                    // Product Image
+                    Panel pn = new Panel();
+                    pn.Size = new Size(220, 165);
+                    pn.Location = new Point(0, 0);
+                    PictureBox pb = new PictureBox();
+                    pb.Size = new Size(220, 165);
+                    pb.BackgroundImageLayout = ImageLayout.Zoom;
+                    pb.BackgroundImage = Image.FromFile(file);
+                    pb.Tag = file;
+                    pb.Cursor = Cursors.Hand;
+                    pb.MouseClick += new MouseEventHandler(this._click);
+                    pn.Controls.Add(pb);
+                    // Name label
+                    Label name_lb = new Label();
+                    name_lb.Text = Convert.ToString(Functions.GetFieldValues(
+                        "select TenSP from SANPHAM where TenFile = N'" + path + "'"));
+                    name_lb.TextAlign = ContentAlignment.MiddleCenter;
+                    if (name_lb.Text.Length > 28)
+                        name_lb.Text = name_lb.Text.Substring(0, 25) + "...";
+                    name_lb.Font = new Font("Arial", 12, FontStyle.Regular);
+                    name_lb.AutoSize = false;
+                    name_lb.Width = 220;
+                    name_lb.Location = new Point(0, 175);
+                    name_lb.MouseClick += new MouseEventHandler(this._lbClick);
+                    // Price label
+                    Label price_lb = new Label();
+                    price_lb.Text = Convert.ToString(Functions.GetFieldValues(
+                        "select GiaSP from SANPHAM where TenFile = N'" + path + "'")) + " đồng";
+                    price_lb.TextAlign = ContentAlignment.MiddleCenter;
+                    price_lb.Font = new Font("Arial", 12, FontStyle.Regular);
+                    price_lb.ForeColor = Color.FromArgb(193, 0, 23);
+                    price_lb.AutoSize = false;
+                    price_lb.Width = 220;
+                    price_lb.Location = new Point(0, 200);
+                    price_lb.MouseClick += new MouseEventHandler(this._lbClick);
+                    // Add to panel
+                    p.Controls.Add(pn);
+                    p.Controls.Add(name_lb);
+                    p.Controls.Add(price_lb);
+                    p.BackColor = Color.White;
+                    //p.BorderStyle = BorderStyle.FixedSingle;
+                    p.MouseClick += new MouseEventHandler(this._pnClick);
+                    p.Cursor = Cursors.Hand;
+                    flowLayoutPanel.Controls.Add(p);
+                }
+            }
+            else if (cbSort.Text == "Giá từ cao tới thấp")
+            {
+                DataTable product_dt = new DataTable();
+                product_dt.Columns.Add("product", typeof(string));
+                product_dt.Columns.Add("price", typeof(int));
+
+                List<string> product_name = new List<string>();
+                foreach (Control control in flowLayoutPanel.Controls)
+                {
+                    string n = (string)control.Controls[0].Controls[0].Tag;
+                    string price_text = (string)control.Controls[2].Text;
+                    int p = Int32.Parse(price_text.Substring(0, price_text.Length - 5));
+                    product_dt.Rows.Add(n, p);
+                }
+                product_dt.DefaultView.Sort = "price DESC";
+                product_dt = product_dt.DefaultView.ToTable();
+
+                List<string> files = new List<string>();
+                foreach (DataRow row in product_dt.Rows)
+                {
+                    files.Add((string)row["product"]);
+                    //MessageBox.Show(files[files.Count - 1]);
+                }
+
+                flowLayoutPanel.Controls.Clear();
+                foreach (string file in files)
+                {
+                    int index = file.IndexOf("\\") + 1;
+                    string path = file.Substring(index, file.Length - index - 4);
+
+                    Panel p = new Panel();
+                    p.Size = new Size(220, 250);
+                    // Product Image
+                    Panel pn = new Panel();
+                    pn.Size = new Size(220, 165);
+                    pn.Location = new Point(0, 0);
+                    PictureBox pb = new PictureBox();
+                    pb.Size = new Size(220, 165);
+                    pb.BackgroundImageLayout = ImageLayout.Zoom;
+                    pb.BackgroundImage = Image.FromFile(file);
+                    pb.Tag = file;
+                    pb.Cursor = Cursors.Hand;
+                    pb.MouseClick += new MouseEventHandler(this._click);
+                    pn.Controls.Add(pb);
+                    // Name label
+                    Label name_lb = new Label();
+                    name_lb.Text = Convert.ToString(Functions.GetFieldValues(
+                        "select TenSP from SANPHAM where TenFile = N'" + path + "'"));
+                    name_lb.TextAlign = ContentAlignment.MiddleCenter;
+                    if (name_lb.Text.Length > 28)
+                        name_lb.Text = name_lb.Text.Substring(0, 25) + "...";
+                    name_lb.Font = new Font("Arial", 12, FontStyle.Regular);
+                    name_lb.AutoSize = false;
+                    name_lb.Width = 220;
+                    name_lb.Location = new Point(0, 175);
+                    name_lb.MouseClick += new MouseEventHandler(this._lbClick);
+                    // Price label
+                    Label price_lb = new Label();
+                    price_lb.Text = Convert.ToString(Functions.GetFieldValues(
+                        "select GiaSP from SANPHAM where TenFile = N'" + path + "'")) + " đồng";
+                    price_lb.TextAlign = ContentAlignment.MiddleCenter;
+                    price_lb.Font = new Font("Arial", 12, FontStyle.Regular);
+                    price_lb.ForeColor = Color.FromArgb(193, 0, 23);
+                    price_lb.AutoSize = false;
+                    price_lb.Width = 220;
+                    price_lb.Location = new Point(0, 200);
+                    price_lb.MouseClick += new MouseEventHandler(this._lbClick);
+                    // Add to panel
+                    p.Controls.Add(pn);
+                    p.Controls.Add(name_lb);
+                    p.Controls.Add(price_lb);
+                    p.BackColor = Color.White;
+                    //p.BorderStyle = BorderStyle.FixedSingle;
+                    p.MouseClick += new MouseEventHandler(this._pnClick);
+                    p.Cursor = Cursors.Hand;
+                    flowLayoutPanel.Controls.Add(p);
+                }
+            }
         }
     }
 }
